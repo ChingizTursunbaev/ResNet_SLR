@@ -20,7 +20,7 @@ import wandb
 def make_wandb(model_dir, cfg):
     if is_main_process():
         wandb.login(key='provide your key here')
-        run = wandb.init(project='TwoStreamSLT', config=cfg, reinit=True)
+        run = wandb.init(project='SignGraph', config=cfg, reinit=True)
         wandb.run.name = '/'.join(model_dir.split('/')[-2:])
         wandb.run.save()
         return run

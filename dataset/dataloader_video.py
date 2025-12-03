@@ -63,7 +63,7 @@ class BaseFeeder(data.Dataset):
         # load file info
         fi = self.inputs_list[index]
         if 'phoenix' in self.dataset:
-            img_folder = os.path.join(self.prefix, "features/fullFrame-210x260px/" + fi['folder'])
+            img_folder = os.path.join(self.prefix, "features/fullFrame-256x256px/" + fi['folder'])
 
         elif self.dataset == 'CSL-Daily':
             img_folder = os.path.join(self.prefix, "sentence/frames_512x512/" + fi['folder'])

@@ -26,11 +26,11 @@ class Processor():
         self.arg = arg
         if not os.path.exists(self.arg.work_dir):
             os.makedirs(self.arg.work_dir)
-        shutil.copy2(__file__, self.arg.work_dir)
-        shutil.copy2('./configs/baseline.yaml', self.arg.work_dir)
-        shutil.copy2('./modules/tconv.py', self.arg.work_dir)
-        shutil.copy2('./modules/resnet.py', self.arg.work_dir)
-        shutil.copy2('./modules/gcn_lib/temgraph.py', self.arg.work_dir)
+        # shutil.copy2(__file__, self.arg.work_dir)
+        # shutil.copy2('./configs/baseline.yaml', self.arg.work_dir)
+        # shutil.copy2('./modules/tconv.py', self.arg.work_dir)
+        # shutil.copy2('./modules/resnet.py', self.arg.work_dir)
+        # shutil.copy2('./modules/gcn_lib/temgraph.py', self.arg.work_dir)
         torch.backends.cudnn.benchmark = True
         if type(self.arg.device) is not int:
             init_distributed_mode(self.arg)

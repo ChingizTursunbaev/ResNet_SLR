@@ -1,2 +1,12 @@
 *.pkl
+CSL-Daily.yaml
+phoenix2014-T.yaml
 /weight
+/work_dir
+/gcn_lib
+__pycache__
+*.pyc
+/CSL-Daily
+/phoenix2014-T
+/tools
+/README.md
