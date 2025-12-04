@@ -1,0 +1,1443 @@
+[ Mon Dec  1 22:43:34 2025 ] Parameters:
+{'work_dir': './work_dir/', 'config': './configs/baseline.yaml', 'random_fix': True, 'device': 0, 'phase': 'train', 'save_interval': 10, 'random_seed': 0, 'eval_interval': 1, 'print_log': True, 'log_interval': 200, 'evaluate_tool': 'python', 'feeder': 'dataset.dataloader_video.BaseFeeder', 'dataset': 'phoenix2014', 'dataset_info': {'dataset_root': '/mnt/data/phoenix-2014/phoenix-2014-multisigner', 'dict_path': './preprocess/phoenix2014/gloss_dict.npy', 'evaluation_dir': './evaluation/slr_eval', 'evaluation_prefix': 'phoenix2014-groundtruth'}, 'num_worker': 20, 'feeder_args': {'mode': 'test', 'datatype': 'video', 'num_gloss': -1, 'drop_ratio': 1.0, 'frame_interval': 1, 'image_scale': 1.0, 'input_size': 224, 'prefix': '/mnt/data/phoenix-2014/phoenix-2014-multisigner', 'transform_mode': False}, 'model': 'slr_network.SLRModel', 'model_args': {'num_classes': 1296, 'c2d_type': 'resnet18', 'conv_type': 2, 'use_bn': 1, 'share_classifier': True, 'weight_norm': True}, 'load_weights': False, 'load_checkpoints': False, 'decode_mode': 'beam', 'ignore_weights': [], 'batch_size': 4, 'test_batch_size': 4, 'loss_weights': {'SeqCTC': 1.0, 'ConvCTC': 1.0, 'Dist': 25.0}, 'optimizer_args': {'optimizer': 'Adam', 'learning_rate': {}, 'step': [20, 30, 35], 'learning_ratio': 1, 'scheduler': 'ScheaL', 'weight_decay': 0.0001, 'start_epoch': 0, 'num_epoch': 101, 'nesterov': False}, 'num_epoch': 80, 'world_size': 1, 'local_rank': 0, 'dist_url': 'env://'}
+
+[ Mon Dec  1 22:43:49 2025 ] 	Epoch: 0, Batch(0/1417) done. Loss: 590.63323975  lr:0.000100
+[ Mon Dec  1 22:44:16 2025 ] Parameters:
+{'work_dir': './work_dir/', 'config': './configs/baseline.yaml', 'random_fix': True, 'device': 0, 'phase': 'train', 'save_interval': 10, 'random_seed': 0, 'eval_interval': 1, 'print_log': True, 'log_interval': 200, 'evaluate_tool': 'python', 'feeder': 'dataset.dataloader_video.BaseFeeder', 'dataset': 'phoenix2014', 'dataset_info': {'dataset_root': '/mnt/data/phoenix-2014/phoenix-2014-multisigner', 'dict_path': './preprocess/phoenix2014/gloss_dict.npy', 'evaluation_dir': './evaluation/slr_eval', 'evaluation_prefix': 'phoenix2014-groundtruth'}, 'num_worker': 20, 'feeder_args': {'mode': 'test', 'datatype': 'video', 'num_gloss': -1, 'drop_ratio': 1.0, 'frame_interval': 1, 'image_scale': 1.0, 'input_size': 224, 'prefix': '/mnt/data/phoenix-2014/phoenix-2014-multisigner', 'transform_mode': False}, 'model': 'slr_network.SLRModel', 'model_args': {'num_classes': 1296, 'c2d_type': 'resnet18', 'conv_type': 2, 'use_bn': 1, 'share_classifier': True, 'weight_norm': True}, 'load_weights': False, 'load_checkpoints': False, 'decode_mode': 'beam', 'ignore_weights': [], 'batch_size': 4, 'test_batch_size': 4, 'loss_weights': {'SeqCTC': 1.0, 'ConvCTC': 1.0, 'Dist': 25.0}, 'optimizer_args': {'optimizer': 'Adam', 'learning_rate': {}, 'step': [20, 30, 35], 'learning_ratio': 1, 'scheduler': 'ScheaL', 'weight_decay': 0.0001, 'start_epoch': 0, 'num_epoch': 101, 'nesterov': False}, 'num_epoch': 80, 'world_size': 1, 'local_rank': 0, 'dist_url': 'env://'}
+
+[ Mon Dec  1 22:44:31 2025 ] 	Epoch: 0, Batch(0/1417) done. Loss: 590.63323975  lr:0.000100
+[ Mon Dec  1 22:46:17 2025 ] 	Epoch: 0, Batch(200/1417) done. Loss: 60.00986099  lr:0.000100
+[ Mon Dec  1 22:47:40 2025 ] 	Epoch: 0, Batch(400/1417) done. Loss: 98.90550995  lr:0.000100
+[ Mon Dec  1 22:48:38 2025 ] 	Epoch: 0, Batch(600/1417) done. Loss: 144.72016907  lr:0.000100
+[ Mon Dec  1 22:49:33 2025 ] 	Epoch: 0, Batch(800/1417) done. Loss: 106.59064484  lr:0.000100
+[ Mon Dec  1 22:50:34 2025 ] 	Epoch: 0, Batch(1000/1417) done. Loss: 117.50454712  lr:0.000100
+[ Mon Dec  1 22:51:28 2025 ] 	Epoch: 0, Batch(1200/1417) done. Loss: 99.30042267  lr:0.000100
+[ Mon Dec  1 22:52:50 2025 ] 	Epoch: 0, Batch(1400/1417) done. Loss: 97.69070435  lr:0.000100
+[ Mon Dec  1 22:52:59 2025 ] 	Mean training loss: 104.3354711432.
+[ Mon Dec  1 22:54:10 2025 ] Dev WER: 62.35% DEV del 48.78% DEV ins 00.60%
+[ Mon Dec  1 22:54:10 2025 ] Test WER: 60.31% Test del 46.43% Test ins 00.89%
+[ Mon Dec  1 22:54:11 2025 ] Save best model
+[ Mon Dec  1 22:54:11 2025 ] Best_dev: 62.35, 48.78, 00.60, Best_test: 60.31, 46.43, 00.89,Epoch : 0
+[ Mon Dec  1 22:54:11 2025 ] Epoch 0 costs 9 mins 54 seconds
+[ Mon Dec  1 22:54:11 2025 ] Training costs 0 hours 9 mins 54 seconds
+[ Mon Dec  1 22:54:14 2025 ] 	Epoch: 1, Batch(0/1417) done. Loss: 84.21888733  lr:0.000100
+[ Mon Dec  1 22:55:10 2025 ] 	Epoch: 1, Batch(200/1417) done. Loss: 71.57565308  lr:0.000100
+[ Mon Dec  1 22:56:03 2025 ] 	Epoch: 1, Batch(400/1417) done. Loss: 47.68453979  lr:0.000100
+[ Mon Dec  1 22:56:58 2025 ] 	Epoch: 1, Batch(600/1417) done. Loss: 84.71461487  lr:0.000100
+[ Mon Dec  1 22:57:51 2025 ] 	Epoch: 1, Batch(800/1417) done. Loss: 67.88241577  lr:0.000100
+[ Mon Dec  1 22:58:42 2025 ] 	Epoch: 1, Batch(1000/1417) done. Loss: 60.48246384  lr:0.000100
+[ Mon Dec  1 22:59:37 2025 ] 	Epoch: 1, Batch(1200/1417) done. Loss: 76.63838196  lr:0.000100
+[ Mon Dec  1 23:00:30 2025 ] 	Epoch: 1, Batch(1400/1417) done. Loss: 52.32794571  lr:0.000100
+[ Mon Dec  1 23:00:34 2025 ] 	Mean training loss: 67.4578415811.
+[ Mon Dec  1 23:01:43 2025 ] Dev WER: 50.17% DEV del 37.51% DEV ins 01.03%
+[ Mon Dec  1 23:01:43 2025 ] Test WER: 48.88% Test del 35.72% Test ins 00.89%
+[ Mon Dec  1 23:01:45 2025 ] Save best model
+[ Mon Dec  1 23:01:45 2025 ] Best_dev: 50.17, 37.51, 01.03, Best_test: 48.88, 35.72, 00.89,Epoch : 1
+[ Mon Dec  1 23:01:45 2025 ] Epoch 1 costs 7 mins 34 seconds
+[ Mon Dec  1 23:01:45 2025 ] Training costs 0 hours 17 mins 28 seconds
+[ Mon Dec  1 23:01:51 2025 ] 	Epoch: 2, Batch(0/1417) done. Loss: 62.93460083  lr:0.000100
+[ Mon Dec  1 23:02:45 2025 ] 	Epoch: 2, Batch(200/1417) done. Loss: 65.62588501  lr:0.000100
+[ Mon Dec  1 23:03:38 2025 ] 	Epoch: 2, Batch(400/1417) done. Loss: 46.03670502  lr:0.000100
+[ Mon Dec  1 23:04:31 2025 ] 	Epoch: 2, Batch(600/1417) done. Loss: 59.74594498  lr:0.000100
+[ Mon Dec  1 23:05:24 2025 ] 	Epoch: 2, Batch(800/1417) done. Loss: 54.43128586  lr:0.000100
+[ Mon Dec  1 23:06:16 2025 ] 	Epoch: 2, Batch(1000/1417) done. Loss: 86.48267365  lr:0.000100
+[ Mon Dec  1 23:07:08 2025 ] 	Epoch: 2, Batch(1200/1417) done. Loss: 33.64832687  lr:0.000100
+[ Mon Dec  1 23:08:02 2025 ] 	Epoch: 2, Batch(1400/1417) done. Loss: 35.45814896  lr:0.000100
+[ Mon Dec  1 23:08:07 2025 ] 	Mean training loss: 51.6189117782.
+[ Mon Dec  1 23:09:15 2025 ] Dev WER: 38.08% DEV del 21.84% DEV ins 02.26%
+[ Mon Dec  1 23:09:15 2025 ] Test WER: 37.06% Test del 20.64% Test ins 02.14%
+[ Mon Dec  1 23:09:17 2025 ] Save best model
+[ Mon Dec  1 23:09:17 2025 ] Best_dev: 38.08, 21.84, 02.26, Best_test: 37.06, 20.64, 02.14,Epoch : 2
+[ Mon Dec  1 23:09:17 2025 ] Epoch 2 costs 7 mins 31 seconds
+[ Mon Dec  1 23:09:17 2025 ] Training costs 0 hours 25 mins 0 seconds
+[ Mon Dec  1 23:09:22 2025 ] 	Epoch: 3, Batch(0/1417) done. Loss: 40.35140228  lr:0.000100
+[ Mon Dec  1 23:10:18 2025 ] 	Epoch: 3, Batch(200/1417) done. Loss: 32.04493332  lr:0.000100
+[ Mon Dec  1 23:11:11 2025 ] 	Epoch: 3, Batch(400/1417) done. Loss: 48.81453323  lr:0.000100
+[ Mon Dec  1 23:12:04 2025 ] 	Epoch: 3, Batch(600/1417) done. Loss: 47.92079163  lr:0.000100
+[ Mon Dec  1 23:12:57 2025 ] 	Epoch: 3, Batch(800/1417) done. Loss: 46.91823959  lr:0.000100
+[ Mon Dec  1 23:13:49 2025 ] 	Epoch: 3, Batch(1000/1417) done. Loss: 38.54294586  lr:0.000100
+[ Mon Dec  1 23:14:43 2025 ] 	Epoch: 3, Batch(1200/1417) done. Loss: 33.65123367  lr:0.000100
+[ Mon Dec  1 23:15:39 2025 ] 	Epoch: 3, Batch(1400/1417) done. Loss: 45.37504196  lr:0.000100
+[ Mon Dec  1 23:15:43 2025 ] 	Mean training loss: 43.6585281079.
+[ Mon Dec  1 23:16:55 2025 ] Dev WER: 35.14% DEV del 19.24% DEV ins 01.39%
+[ Mon Dec  1 23:16:55 2025 ] Test WER: 35.27% Test del 18.53% Test ins 01.26%
+[ Mon Dec  1 23:16:57 2025 ] Save best model
+[ Mon Dec  1 23:16:57 2025 ] Best_dev: 35.14, 19.24, 01.39, Best_test: 35.27, 18.53, 01.26,Epoch : 3
+[ Mon Dec  1 23:16:57 2025 ] Epoch 3 costs 7 mins 40 seconds
+[ Mon Dec  1 23:16:57 2025 ] Training costs 0 hours 32 mins 40 seconds
+[ Mon Dec  1 23:17:02 2025 ] 	Epoch: 4, Batch(0/1417) done. Loss: 65.78301239  lr:0.000100
+[ Mon Dec  1 23:17:55 2025 ] 	Epoch: 4, Batch(200/1417) done. Loss: 46.56692123  lr:0.000100
+[ Mon Dec  1 23:18:49 2025 ] 	Epoch: 4, Batch(400/1417) done. Loss: 28.77254868  lr:0.000100
+[ Mon Dec  1 23:19:43 2025 ] 	Epoch: 4, Batch(600/1417) done. Loss: 46.41690826  lr:0.000100
+[ Mon Dec  1 23:21:19 2025 ] 	Epoch: 4, Batch(800/1417) done. Loss: 39.91366577  lr:0.000100
+[ Mon Dec  1 23:23:04 2025 ] 	Epoch: 4, Batch(1000/1417) done. Loss: 35.52817154  lr:0.000100
+[ Mon Dec  1 23:24:46 2025 ] 	Epoch: 4, Batch(1200/1417) done. Loss: 49.79291153  lr:0.000100
+[ Mon Dec  1 23:26:30 2025 ] 	Epoch: 4, Batch(1400/1417) done. Loss: 44.37326431  lr:0.000100
+[ Mon Dec  1 23:26:39 2025 ] 	Mean training loss: 38.9129314100.
+[ Mon Dec  1 23:28:09 2025 ] Dev WER: 30.17% DEV del 10.89% DEV ins 02.46%
+[ Mon Dec  1 23:28:09 2025 ] Test WER: 30.03% Test del 10.67% Test ins 02.62%
+[ Mon Dec  1 23:28:11 2025 ] Save best model
+[ Mon Dec  1 23:28:11 2025 ] Best_dev: 30.17, 10.89, 02.46, Best_test: 30.03, 10.67, 02.62,Epoch : 4
+[ Mon Dec  1 23:28:11 2025 ] Epoch 4 costs 11 mins 13 seconds
+[ Mon Dec  1 23:28:11 2025 ] Training costs 0 hours 43 mins 54 seconds
+[ Mon Dec  1 23:28:20 2025 ] 	Epoch: 5, Batch(0/1417) done. Loss: 24.13946152  lr:0.000100
+[ Mon Dec  1 23:30:05 2025 ] 	Epoch: 5, Batch(200/1417) done. Loss: 29.95291328  lr:0.000100
+[ Mon Dec  1 23:31:47 2025 ] 	Epoch: 5, Batch(400/1417) done. Loss: 37.33317566  lr:0.000100
+[ Mon Dec  1 23:33:32 2025 ] 	Epoch: 5, Batch(600/1417) done. Loss: 25.54437828  lr:0.000100
+[ Mon Dec  1 23:35:15 2025 ] 	Epoch: 5, Batch(800/1417) done. Loss: 50.82179642  lr:0.000100
+[ Mon Dec  1 23:36:58 2025 ] 	Epoch: 5, Batch(1000/1417) done. Loss: 29.82060051  lr:0.000100
+[ Mon Dec  1 23:38:43 2025 ] 	Epoch: 5, Batch(1200/1417) done. Loss: 38.12973022  lr:0.000100
+[ Mon Dec  1 23:40:30 2025 ] 	Epoch: 5, Batch(1400/1417) done. Loss: 24.37977791  lr:0.000100
+[ Mon Dec  1 23:40:38 2025 ] 	Mean training loss: 35.2917751583.
+[ Mon Dec  1 23:42:17 2025 ] Dev WER: 28.38% DEV del 11.82% DEV ins 02.22%
+[ Mon Dec  1 23:42:17 2025 ] Test WER: 29.12% Test del 11.46% Test ins 02.29%
+[ Mon Dec  1 23:42:19 2025 ] Save best model
+[ Mon Dec  1 23:42:19 2025 ] Best_dev: 28.38, 11.82, 02.22, Best_test: 29.12, 11.46, 02.29,Epoch : 5
+[ Mon Dec  1 23:42:19 2025 ] Epoch 5 costs 14 mins 8 seconds
+[ Mon Dec  1 23:42:19 2025 ] Training costs 0 hours 58 mins 2 seconds
+[ Mon Dec  1 23:42:24 2025 ] 	Epoch: 6, Batch(0/1417) done. Loss: 17.08164597  lr:0.000100
+[ Mon Dec  1 23:44:07 2025 ] 	Epoch: 6, Batch(200/1417) done. Loss: 43.86054611  lr:0.000100
+[ Mon Dec  1 23:45:49 2025 ] 	Epoch: 6, Batch(400/1417) done. Loss: 37.87611389  lr:0.000100
+[ Mon Dec  1 23:47:34 2025 ] 	Epoch: 6, Batch(600/1417) done. Loss: 53.27682495  lr:0.000100
+[ Mon Dec  1 23:49:18 2025 ] 	Epoch: 6, Batch(800/1417) done. Loss: 25.50972939  lr:0.000100
+[ Mon Dec  1 23:50:58 2025 ] 	Epoch: 6, Batch(1000/1417) done. Loss: 22.75253677  lr:0.000100
+[ Mon Dec  1 23:52:36 2025 ] 	Epoch: 6, Batch(1200/1417) done. Loss: 35.58705139  lr:0.000100
+[ Mon Dec  1 23:54:21 2025 ] 	Epoch: 6, Batch(1400/1417) done. Loss: 30.18437195  lr:0.000100
+[ Mon Dec  1 23:54:29 2025 ] 	Mean training loss: 32.5357403725.
+[ Mon Dec  1 23:56:04 2025 ] Dev WER: 26.96% DEV del 11.35% DEV ins 01.92%
+[ Mon Dec  1 23:56:04 2025 ] Test WER: 27.66% Test del 10.98% Test ins 01.96%
+[ Mon Dec  1 23:56:06 2025 ] Save best model
+[ Mon Dec  1 23:56:06 2025 ] Best_dev: 26.96, 11.35, 01.92, Best_test: 27.66, 10.98, 01.96,Epoch : 6
+[ Mon Dec  1 23:56:06 2025 ] Epoch 6 costs 13 mins 46 seconds
+[ Mon Dec  1 23:56:06 2025 ] Training costs 1 hours 11 mins 49 seconds
+[ Mon Dec  1 23:56:11 2025 ] 	Epoch: 7, Batch(0/1417) done. Loss: 23.43444824  lr:0.000100
+[ Mon Dec  1 23:57:58 2025 ] 	Epoch: 7, Batch(200/1417) done. Loss: 26.95922661  lr:0.000100
+[ Mon Dec  1 23:59:42 2025 ] 	Epoch: 7, Batch(400/1417) done. Loss: 29.19761276  lr:0.000100
+[ Tue Dec  2 00:01:27 2025 ] 	Epoch: 7, Batch(600/1417) done. Loss: 32.14901352  lr:0.000100
+[ Tue Dec  2 00:02:57 2025 ] 	Epoch: 7, Batch(800/1417) done. Loss: 41.11348724  lr:0.000100
+[ Tue Dec  2 00:03:51 2025 ] 	Epoch: 7, Batch(1000/1417) done. Loss: 31.02034760  lr:0.000100
+[ Tue Dec  2 00:04:44 2025 ] 	Epoch: 7, Batch(1200/1417) done. Loss: 31.56864738  lr:0.000100
+[ Tue Dec  2 00:05:37 2025 ] 	Epoch: 7, Batch(1400/1417) done. Loss: 37.25802994  lr:0.000100
+[ Tue Dec  2 00:05:41 2025 ] 	Mean training loss: 30.5325453266.
+[ Tue Dec  2 00:06:42 2025 ] Dev WER: 25.02% DEV del 09.50% DEV ins 02.19%
+[ Tue Dec  2 00:06:42 2025 ] Test WER: 26.46% Test del 09.41% Test ins 02.40%
+[ Tue Dec  2 00:06:44 2025 ] Save best model
+[ Tue Dec  2 00:06:44 2025 ] Best_dev: 25.02, 09.50, 02.19, Best_test: 26.46, 09.41, 02.40,Epoch : 7
+[ Tue Dec  2 00:06:44 2025 ] Epoch 7 costs 10 mins 38 seconds
+[ Tue Dec  2 00:06:44 2025 ] Training costs 1 hours 22 mins 27 seconds
+[ Tue Dec  2 00:06:49 2025 ] 	Epoch: 8, Batch(0/1417) done. Loss: 31.94091034  lr:0.000100
+[ Tue Dec  2 00:07:47 2025 ] 	Epoch: 8, Batch(200/1417) done. Loss: 22.10270882  lr:0.000100
+[ Tue Dec  2 00:08:39 2025 ] 	Epoch: 8, Batch(400/1417) done. Loss: 30.54726028  lr:0.000100
+[ Tue Dec  2 00:09:33 2025 ] 	Epoch: 8, Batch(600/1417) done. Loss: 29.94369507  lr:0.000100
+[ Tue Dec  2 00:10:25 2025 ] 	Epoch: 8, Batch(800/1417) done. Loss: 23.30109787  lr:0.000100
+[ Tue Dec  2 00:11:18 2025 ] 	Epoch: 8, Batch(1000/1417) done. Loss: 22.33861923  lr:0.000100
+[ Tue Dec  2 00:12:10 2025 ] 	Epoch: 8, Batch(1200/1417) done. Loss: 36.47282410  lr:0.000100
+[ Tue Dec  2 00:13:03 2025 ] 	Epoch: 8, Batch(1400/1417) done. Loss: 23.48878098  lr:0.000100
+[ Tue Dec  2 00:13:07 2025 ] 	Mean training loss: 28.7036948302.
+[ Tue Dec  2 00:14:16 2025 ] Dev WER: 24.70% DEV del 07.90% DEV ins 02.66%
+[ Tue Dec  2 00:14:16 2025 ] Test WER: 25.46% Test del 08.18% Test ins 02.60%
+[ Tue Dec  2 00:14:18 2025 ] Save best model
+[ Tue Dec  2 00:14:18 2025 ] Best_dev: 24.70, 07.90, 02.66, Best_test: 25.46, 08.18, 02.60,Epoch : 8
+[ Tue Dec  2 00:14:18 2025 ] Epoch 8 costs 7 mins 33 seconds
+[ Tue Dec  2 00:14:18 2025 ] Training costs 1 hours 30 mins 1 seconds
+[ Tue Dec  2 00:14:22 2025 ] 	Epoch: 9, Batch(0/1417) done. Loss: 19.26748466  lr:0.000100
+[ Tue Dec  2 00:15:20 2025 ] 	Epoch: 9, Batch(200/1417) done. Loss: 19.42617798  lr:0.000100
+[ Tue Dec  2 00:16:12 2025 ] 	Epoch: 9, Batch(400/1417) done. Loss: 15.46105385  lr:0.000100
+[ Tue Dec  2 00:17:06 2025 ] 	Epoch: 9, Batch(600/1417) done. Loss: 29.98281097  lr:0.000100
+[ Tue Dec  2 00:17:58 2025 ] 	Epoch: 9, Batch(800/1417) done. Loss: 21.65639877  lr:0.000100
+[ Tue Dec  2 00:18:50 2025 ] 	Epoch: 9, Batch(1000/1417) done. Loss: 16.17325020  lr:0.000100
+[ Tue Dec  2 00:19:44 2025 ] 	Epoch: 9, Batch(1200/1417) done. Loss: 33.05318069  lr:0.000100
+[ Tue Dec  2 00:20:39 2025 ] 	Epoch: 9, Batch(1400/1417) done. Loss: 23.82776642  lr:0.000100
+[ Tue Dec  2 00:20:44 2025 ] 	Mean training loss: 27.2525621453.
+[ Tue Dec  2 00:22:00 2025 ] Dev WER: 25.24% DEV del 10.33% DEV ins 02.17%
+[ Tue Dec  2 00:22:00 2025 ] Test WER: 25.40% Test del 09.26% Test ins 02.23%
+[ Tue Dec  2 00:22:00 2025 ] Best_dev: 24.70, 07.90, 02.66, Best_test: 25.46, 08.18, 02.60,Epoch : 8
+[ Tue Dec  2 00:22:00 2025 ] Epoch 9 costs 7 mins 41 seconds
+[ Tue Dec  2 00:22:00 2025 ] Training costs 1 hours 37 mins 42 seconds
+[ Tue Dec  2 00:22:04 2025 ] 	Epoch: 10, Batch(0/1417) done. Loss: 28.68699265  lr:0.000100
+[ Tue Dec  2 00:23:00 2025 ] 	Epoch: 10, Batch(200/1417) done. Loss: 34.94410706  lr:0.000100
+[ Tue Dec  2 00:23:57 2025 ] 	Epoch: 10, Batch(400/1417) done. Loss: 26.78187370  lr:0.000100
+[ Tue Dec  2 00:24:50 2025 ] 	Epoch: 10, Batch(600/1417) done. Loss: 24.12498856  lr:0.000100
+[ Tue Dec  2 00:25:43 2025 ] 	Epoch: 10, Batch(800/1417) done. Loss: 33.53834152  lr:0.000100
+[ Tue Dec  2 00:26:41 2025 ] 	Epoch: 10, Batch(1000/1417) done. Loss: 30.16757965  lr:0.000100
+[ Tue Dec  2 00:27:34 2025 ] 	Epoch: 10, Batch(1200/1417) done. Loss: 21.99583817  lr:0.000100
+[ Tue Dec  2 00:28:31 2025 ] 	Epoch: 10, Batch(1400/1417) done. Loss: 17.32741356  lr:0.000100
+[ Tue Dec  2 00:28:35 2025 ] 	Mean training loss: 25.7122137235.
+[ Tue Dec  2 00:29:58 2025 ] Dev WER: 23.13% DEV del 06.14% DEV ins 03.29%
+[ Tue Dec  2 00:29:58 2025 ] Test WER: 24.00% Test del 06.38% Test ins 03.39%
+[ Tue Dec  2 00:30:00 2025 ] Save best model
+[ Tue Dec  2 00:30:00 2025 ] Best_dev: 23.13, 06.14, 03.29, Best_test: 24.00, 06.38, 03.39,Epoch : 10
+[ Tue Dec  2 00:30:01 2025 ] Epoch 10 costs 8 mins 1 seconds
+[ Tue Dec  2 00:30:01 2025 ] Training costs 1 hours 45 mins 43 seconds
+[ Tue Dec  2 00:30:06 2025 ] 	Epoch: 11, Batch(0/1417) done. Loss: 19.77252769  lr:0.000100
+[ Tue Dec  2 00:31:10 2025 ] 	Epoch: 11, Batch(200/1417) done. Loss: 21.79491234  lr:0.000100
+[ Tue Dec  2 00:32:02 2025 ] 	Epoch: 11, Batch(400/1417) done. Loss: 16.63378334  lr:0.000100
+[ Tue Dec  2 00:32:54 2025 ] 	Epoch: 11, Batch(600/1417) done. Loss: 38.62204361  lr:0.000100
+[ Tue Dec  2 00:33:53 2025 ] 	Epoch: 11, Batch(800/1417) done. Loss: 34.57342529  lr:0.000100
+[ Tue Dec  2 00:34:47 2025 ] 	Epoch: 11, Batch(1000/1417) done. Loss: 21.53397751  lr:0.000100
+[ Tue Dec  2 00:36:01 2025 ] 	Epoch: 11, Batch(1200/1417) done. Loss: 27.07592583  lr:0.000100
+[ Tue Dec  2 00:37:44 2025 ] 	Epoch: 11, Batch(1400/1417) done. Loss: 23.73294449  lr:0.000100
+[ Tue Dec  2 00:37:53 2025 ] 	Mean training loss: 24.7141014953.
+[ Tue Dec  2 00:39:29 2025 ] Dev WER: 24.57% DEV del 09.56% DEV ins 01.90%
+[ Tue Dec  2 00:39:29 2025 ] Test WER: 23.98% Test del 08.24% Test ins 02.23%
+[ Tue Dec  2 00:39:29 2025 ] Best_dev: 23.13, 06.14, 03.29, Best_test: 24.00, 06.38, 03.39,Epoch : 10
+[ Tue Dec  2 00:39:29 2025 ] Epoch 11 costs 9 mins 28 seconds
+[ Tue Dec  2 00:39:29 2025 ] Training costs 1 hours 55 mins 12 seconds
+[ Tue Dec  2 00:39:39 2025 ] 	Epoch: 12, Batch(0/1417) done. Loss: 23.51303864  lr:0.000100
+[ Tue Dec  2 00:41:25 2025 ] 	Epoch: 12, Batch(200/1417) done. Loss: 13.00049305  lr:0.000100
+[ Tue Dec  2 00:43:07 2025 ] 	Epoch: 12, Batch(400/1417) done. Loss: 14.10473824  lr:0.000100
+[ Tue Dec  2 00:44:53 2025 ] 	Epoch: 12, Batch(600/1417) done. Loss: 23.17081261  lr:0.000100
+[ Tue Dec  2 00:46:38 2025 ] 	Epoch: 12, Batch(800/1417) done. Loss: 48.96408463  lr:0.000100
+[ Tue Dec  2 00:48:22 2025 ] 	Epoch: 12, Batch(1000/1417) done. Loss: 19.78659058  lr:0.000100
+[ Tue Dec  2 00:50:07 2025 ] 	Epoch: 12, Batch(1200/1417) done. Loss: 26.61713219  lr:0.000100
+[ Tue Dec  2 00:51:51 2025 ] 	Epoch: 12, Batch(1400/1417) done. Loss: 23.03923416  lr:0.000100
+[ Tue Dec  2 00:51:59 2025 ] 	Mean training loss: 23.6204347637.
+[ Tue Dec  2 00:53:36 2025 ] Dev WER: 23.40% DEV del 08.73% DEV ins 02.28%
+[ Tue Dec  2 00:53:36 2025 ] Test WER: 23.52% Test del 08.39% Test ins 02.36%
+[ Tue Dec  2 00:53:36 2025 ] Best_dev: 23.13, 06.14, 03.29, Best_test: 24.00, 06.38, 03.39,Epoch : 10
+[ Tue Dec  2 00:53:36 2025 ] Epoch 12 costs 14 mins 6 seconds
+[ Tue Dec  2 00:53:36 2025 ] Training costs 2 hours 9 mins 18 seconds
+[ Tue Dec  2 00:53:45 2025 ] 	Epoch: 13, Batch(0/1417) done. Loss: 29.00338745  lr:0.000100
+[ Tue Dec  2 00:55:30 2025 ] 	Epoch: 13, Batch(200/1417) done. Loss: 21.85868645  lr:0.000100
+[ Tue Dec  2 00:57:13 2025 ] 	Epoch: 13, Batch(400/1417) done. Loss: 13.34413433  lr:0.000100
+[ Tue Dec  2 00:58:56 2025 ] 	Epoch: 13, Batch(600/1417) done. Loss: 28.20728683  lr:0.000100
+[ Tue Dec  2 01:00:37 2025 ] 	Epoch: 13, Batch(800/1417) done. Loss: 25.23202515  lr:0.000100
+[ Tue Dec  2 01:02:22 2025 ] 	Epoch: 13, Batch(1000/1417) done. Loss: 20.96921539  lr:0.000100
+[ Tue Dec  2 01:04:04 2025 ] 	Epoch: 13, Batch(1200/1417) done. Loss: 22.05652046  lr:0.000100
+[ Tue Dec  2 01:05:47 2025 ] 	Epoch: 13, Batch(1400/1417) done. Loss: 31.63681030  lr:0.000100
+[ Tue Dec  2 01:05:56 2025 ] 	Mean training loss: 22.5569309694.
+[ Tue Dec  2 01:07:42 2025 ] Dev WER: 23.04% DEV del 09.43% DEV ins 02.11%
+[ Tue Dec  2 01:07:42 2025 ] Test WER: 23.26% Test del 09.13% Test ins 02.02%
+[ Tue Dec  2 01:07:44 2025 ] Save best model
+[ Tue Dec  2 01:07:44 2025 ] Best_dev: 23.04, 09.43, 02.11, Best_test: 23.26, 09.13, 02.02,Epoch : 13
+[ Tue Dec  2 01:07:44 2025 ] Epoch 13 costs 14 mins 8 seconds
+[ Tue Dec  2 01:07:44 2025 ] Training costs 2 hours 23 mins 27 seconds
+[ Tue Dec  2 01:07:49 2025 ] 	Epoch: 14, Batch(0/1417) done. Loss: 21.58197784  lr:0.000100
+[ Tue Dec  2 01:09:39 2025 ] 	Epoch: 14, Batch(200/1417) done. Loss: 20.35894394  lr:0.000100
+[ Tue Dec  2 01:11:21 2025 ] 	Epoch: 14, Batch(400/1417) done. Loss: 16.78136826  lr:0.000100
+[ Tue Dec  2 01:13:05 2025 ] 	Epoch: 14, Batch(600/1417) done. Loss: 14.27497673  lr:0.000100
+[ Tue Dec  2 01:14:48 2025 ] 	Epoch: 14, Batch(800/1417) done. Loss: 16.97631836  lr:0.000100
+[ Tue Dec  2 01:16:30 2025 ] 	Epoch: 14, Batch(1000/1417) done. Loss: 16.54431725  lr:0.000100
+[ Tue Dec  2 01:18:11 2025 ] 	Epoch: 14, Batch(1200/1417) done. Loss: 19.82834625  lr:0.000100
+[ Tue Dec  2 01:19:12 2025 ] 	Epoch: 14, Batch(1400/1417) done. Loss: 14.26006699  lr:0.000100
+[ Tue Dec  2 01:19:17 2025 ] 	Mean training loss: 21.5983375729.
+[ Tue Dec  2 01:20:30 2025 ] Dev WER: 22.57% DEV del 09.34% DEV ins 02.01%
+[ Tue Dec  2 01:20:30 2025 ] Test WER: 22.78% Test del 08.67% Test ins 02.13%
+[ Tue Dec  2 01:20:32 2025 ] Save best model
+[ Tue Dec  2 01:20:32 2025 ] Best_dev: 22.57, 09.34, 02.01, Best_test: 22.78, 08.67, 02.13,Epoch : 14
+[ Tue Dec  2 01:20:32 2025 ] Epoch 14 costs 12 mins 47 seconds
+[ Tue Dec  2 01:20:32 2025 ] Training costs 2 hours 36 mins 15 seconds
+[ Tue Dec  2 01:20:37 2025 ] 	Epoch: 15, Batch(0/1417) done. Loss: 20.23126221  lr:0.000100
+[ Tue Dec  2 01:21:30 2025 ] 	Epoch: 15, Batch(200/1417) done. Loss: 17.12705612  lr:0.000100
+[ Tue Dec  2 01:22:23 2025 ] 	Epoch: 15, Batch(400/1417) done. Loss: 20.16982269  lr:0.000100
+[ Tue Dec  2 01:23:16 2025 ] 	Epoch: 15, Batch(600/1417) done. Loss: 27.47510147  lr:0.000100
+[ Tue Dec  2 01:24:08 2025 ] 	Epoch: 15, Batch(800/1417) done. Loss: 28.35434914  lr:0.000100
+[ Tue Dec  2 01:25:03 2025 ] 	Epoch: 15, Batch(1000/1417) done. Loss: 25.50585747  lr:0.000100
+[ Tue Dec  2 01:25:55 2025 ] 	Epoch: 15, Batch(1200/1417) done. Loss: 38.09193802  lr:0.000100
+[ Tue Dec  2 01:26:48 2025 ] 	Epoch: 15, Batch(1400/1417) done. Loss: 26.68672371  lr:0.000100
+[ Tue Dec  2 01:26:53 2025 ] 	Mean training loss: 20.9987999574.
+[ Tue Dec  2 01:28:07 2025 ] Dev WER: 22.58% DEV del 07.21% DEV ins 02.85%
+[ Tue Dec  2 01:28:07 2025 ] Test WER: 23.06% Test del 07.27% Test ins 03.00%
+[ Tue Dec  2 01:28:07 2025 ] Best_dev: 22.57, 09.34, 02.01, Best_test: 22.78, 08.67, 02.13,Epoch : 14
+[ Tue Dec  2 01:28:07 2025 ] Epoch 15 costs 7 mins 35 seconds
+[ Tue Dec  2 01:28:07 2025 ] Training costs 2 hours 43 mins 50 seconds
+[ Tue Dec  2 01:28:13 2025 ] 	Epoch: 16, Batch(0/1417) done. Loss: 22.05794334  lr:0.000100
+[ Tue Dec  2 01:29:06 2025 ] 	Epoch: 16, Batch(200/1417) done. Loss: 24.51316452  lr:0.000100
+[ Tue Dec  2 01:29:59 2025 ] 	Epoch: 16, Batch(400/1417) done. Loss: 24.78186226  lr:0.000100
+[ Tue Dec  2 01:30:50 2025 ] 	Epoch: 16, Batch(600/1417) done. Loss: 21.61565208  lr:0.000100
+[ Tue Dec  2 01:31:43 2025 ] 	Epoch: 16, Batch(800/1417) done. Loss: 18.13360596  lr:0.000100
+[ Tue Dec  2 01:32:43 2025 ] 	Epoch: 16, Batch(1000/1417) done. Loss: 22.48716164  lr:0.000100
+[ Tue Dec  2 01:33:36 2025 ] 	Epoch: 16, Batch(1200/1417) done. Loss: 18.52933311  lr:0.000100
+[ Tue Dec  2 01:34:29 2025 ] 	Epoch: 16, Batch(1400/1417) done. Loss: 25.87180328  lr:0.000100
+[ Tue Dec  2 01:34:34 2025 ] 	Mean training loss: 19.8757612979.
+[ Tue Dec  2 01:35:40 2025 ] Dev WER: 22.75% DEV del 08.36% DEV ins 02.48%
+[ Tue Dec  2 01:35:40 2025 ] Test WER: 22.70% Test del 08.36% Test ins 02.46%
+[ Tue Dec  2 01:35:40 2025 ] Best_dev: 22.57, 09.34, 02.01, Best_test: 22.78, 08.67, 02.13,Epoch : 14
+[ Tue Dec  2 01:35:40 2025 ] Epoch 16 costs 7 mins 32 seconds
+[ Tue Dec  2 01:35:40 2025 ] Training costs 2 hours 51 mins 22 seconds
+[ Tue Dec  2 01:35:46 2025 ] 	Epoch: 17, Batch(0/1417) done. Loss: 23.77097321  lr:0.000100
+[ Tue Dec  2 01:36:41 2025 ] 	Epoch: 17, Batch(200/1417) done. Loss: 16.28009033  lr:0.000100
+[ Tue Dec  2 01:37:34 2025 ] 	Epoch: 17, Batch(400/1417) done. Loss: 15.79845810  lr:0.000100
+[ Tue Dec  2 01:38:27 2025 ] 	Epoch: 17, Batch(600/1417) done. Loss: 19.93970490  lr:0.000100
+[ Tue Dec  2 01:39:19 2025 ] 	Epoch: 17, Batch(800/1417) done. Loss: 20.09896469  lr:0.000100
+[ Tue Dec  2 01:40:14 2025 ] 	Epoch: 17, Batch(1000/1417) done. Loss: 15.53165245  lr:0.000100
+[ Tue Dec  2 01:41:07 2025 ] 	Epoch: 17, Batch(1200/1417) done. Loss: 16.80775070  lr:0.000100
+[ Tue Dec  2 01:42:03 2025 ] 	Epoch: 17, Batch(1400/1417) done. Loss: 29.70040321  lr:0.000100
+[ Tue Dec  2 01:42:08 2025 ] 	Mean training loss: 19.1776713023.
+[ Tue Dec  2 01:43:18 2025 ] Dev WER: 22.19% DEV del 08.49% DEV ins 02.53%
+[ Tue Dec  2 01:43:18 2025 ] Test WER: 22.47% Test del 07.59% Test ins 02.43%
+[ Tue Dec  2 01:43:20 2025 ] Save best model
+[ Tue Dec  2 01:43:20 2025 ] Best_dev: 22.19, 08.49, 02.53, Best_test: 22.47, 07.59, 02.43,Epoch : 17
+[ Tue Dec  2 01:43:20 2025 ] Epoch 17 costs 7 mins 40 seconds
+[ Tue Dec  2 01:43:20 2025 ] Training costs 2 hours 59 mins 3 seconds
+[ Tue Dec  2 01:43:27 2025 ] 	Epoch: 18, Batch(0/1417) done. Loss: 18.56630707  lr:0.000100
+[ Tue Dec  2 01:44:28 2025 ] 	Epoch: 18, Batch(200/1417) done. Loss: 18.74783516  lr:0.000100
+[ Tue Dec  2 01:45:22 2025 ] 	Epoch: 18, Batch(400/1417) done. Loss: 20.66074753  lr:0.000100
+[ Tue Dec  2 01:46:19 2025 ] 	Epoch: 18, Batch(600/1417) done. Loss: 20.22102547  lr:0.000100
+[ Tue Dec  2 01:47:10 2025 ] 	Epoch: 18, Batch(800/1417) done. Loss: 16.27586365  lr:0.000100
+[ Tue Dec  2 01:48:13 2025 ] 	Epoch: 18, Batch(1000/1417) done. Loss: 23.12776566  lr:0.000100
+[ Tue Dec  2 01:49:07 2025 ] 	Epoch: 18, Batch(1200/1417) done. Loss: 19.18432236  lr:0.000100
+[ Tue Dec  2 01:50:08 2025 ] 	Epoch: 18, Batch(1400/1417) done. Loss: 25.16964340  lr:0.000100
+[ Tue Dec  2 01:50:12 2025 ] 	Mean training loss: 18.4517192999.
+[ Tue Dec  2 01:51:21 2025 ] Dev WER: 21.57% DEV del 07.59% DEV ins 02.24%
+[ Tue Dec  2 01:51:21 2025 ] Test WER: 22.59% Test del 07.62% Test ins 02.51%
+[ Tue Dec  2 01:51:23 2025 ] Save best model
+[ Tue Dec  2 01:51:23 2025 ] Best_dev: 21.57, 07.59, 02.24, Best_test: 22.59, 07.62, 02.51,Epoch : 18
+[ Tue Dec  2 01:51:23 2025 ] Epoch 18 costs 8 mins 2 seconds
+[ Tue Dec  2 01:51:23 2025 ] Training costs 3 hours 7 mins 5 seconds
+[ Tue Dec  2 01:51:31 2025 ] 	Epoch: 19, Batch(0/1417) done. Loss: 17.45165062  lr:0.000100
+[ Tue Dec  2 01:52:39 2025 ] 	Epoch: 19, Batch(200/1417) done. Loss: 18.38959694  lr:0.000100
+[ Tue Dec  2 01:54:21 2025 ] 	Epoch: 19, Batch(400/1417) done. Loss: 13.47995949  lr:0.000100
+[ Tue Dec  2 01:56:06 2025 ] 	Epoch: 19, Batch(600/1417) done. Loss: 15.91008568  lr:0.000100
+[ Tue Dec  2 01:57:49 2025 ] 	Epoch: 19, Batch(800/1417) done. Loss: 16.01583481  lr:0.000100
+[ Tue Dec  2 01:59:29 2025 ] 	Epoch: 19, Batch(1000/1417) done. Loss: 13.39418697  lr:0.000100
+[ Tue Dec  2 02:01:11 2025 ] 	Epoch: 19, Batch(1200/1417) done. Loss: 17.79442787  lr:0.000100
+[ Tue Dec  2 02:02:55 2025 ] 	Epoch: 19, Batch(1400/1417) done. Loss: 21.62241364  lr:0.000100
+[ Tue Dec  2 02:03:03 2025 ] 	Mean training loss: 17.9696172571.
+[ Tue Dec  2 02:04:50 2025 ] Dev WER: 22.64% DEV del 08.78% DEV ins 01.95%
+[ Tue Dec  2 02:04:50 2025 ] Test WER: 22.96% Test del 08.50% Test ins 02.25%
+[ Tue Dec  2 02:04:50 2025 ] Best_dev: 21.57, 07.59, 02.24, Best_test: 22.59, 07.62, 02.51,Epoch : 18
+[ Tue Dec  2 02:04:50 2025 ] Epoch 19 costs 13 mins 27 seconds
+[ Tue Dec  2 02:04:50 2025 ] Training costs 3 hours 20 mins 32 seconds
+[ Tue Dec  2 02:04:56 2025 ] 	Epoch: 20, Batch(0/1417) done. Loss: 17.38359642  lr:0.000020
+[ Tue Dec  2 02:06:45 2025 ] 	Epoch: 20, Batch(200/1417) done. Loss: 11.63126755  lr:0.000020
+[ Tue Dec  2 02:08:23 2025 ] 	Epoch: 20, Batch(400/1417) done. Loss: 9.38803673  lr:0.000020
+[ Tue Dec  2 02:10:09 2025 ] 	Epoch: 20, Batch(600/1417) done. Loss: 19.51228905  lr:0.000020
+[ Tue Dec  2 02:11:48 2025 ] 	Epoch: 20, Batch(800/1417) done. Loss: 15.67629337  lr:0.000020
+[ Tue Dec  2 02:13:31 2025 ] 	Epoch: 20, Batch(1000/1417) done. Loss: 14.31101608  lr:0.000020
+[ Tue Dec  2 02:15:16 2025 ] 	Epoch: 20, Batch(1200/1417) done. Loss: 10.17640400  lr:0.000020
+[ Tue Dec  2 02:16:58 2025 ] 	Epoch: 20, Batch(1400/1417) done. Loss: 15.59115887  lr:0.000020
+[ Tue Dec  2 02:17:06 2025 ] 	Mean training loss: 14.3142168197.
+[ Tue Dec  2 02:18:52 2025 ] Dev WER: 19.71% DEV del 07.28% DEV ins 02.26%
+[ Tue Dec  2 02:18:52 2025 ] Test WER: 20.39% Test del 07.25% Test ins 02.09%
+[ Tue Dec  2 02:18:54 2025 ] Save best model
+[ Tue Dec  2 02:18:54 2025 ] Best_dev: 19.71, 07.28, 02.26, Best_test: 20.39, 07.25, 02.09,Epoch : 20
+[ Tue Dec  2 02:18:55 2025 ] Epoch 20 costs 14 mins 5 seconds
+[ Tue Dec  2 02:18:55 2025 ] Training costs 3 hours 34 mins 37 seconds
+[ Tue Dec  2 02:19:04 2025 ] 	Epoch: 21, Batch(0/1417) done. Loss: 18.65018845  lr:0.000020
+[ Tue Dec  2 02:20:48 2025 ] 	Epoch: 21, Batch(200/1417) done. Loss: 10.22100449  lr:0.000020
+[ Tue Dec  2 02:22:29 2025 ] 	Epoch: 21, Batch(400/1417) done. Loss: 11.63285255  lr:0.000020
+[ Tue Dec  2 02:24:13 2025 ] 	Epoch: 21, Batch(600/1417) done. Loss: 8.99022961  lr:0.000020
+[ Tue Dec  2 02:25:57 2025 ] 	Epoch: 21, Batch(800/1417) done. Loss: 14.06616306  lr:0.000020
+[ Tue Dec  2 02:27:41 2025 ] 	Epoch: 21, Batch(1000/1417) done. Loss: 11.15000534  lr:0.000020
+[ Tue Dec  2 02:29:26 2025 ] 	Epoch: 21, Batch(1200/1417) done. Loss: 8.38726425  lr:0.000020
+[ Tue Dec  2 02:31:10 2025 ] 	Epoch: 21, Batch(1400/1417) done. Loss: 10.94932556  lr:0.000020
+[ Tue Dec  2 02:31:19 2025 ] 	Mean training loss: 13.4738615614.
+[ Tue Dec  2 02:33:00 2025 ] Dev WER: 19.77% DEV del 07.55% DEV ins 02.08%
+[ Tue Dec  2 02:33:00 2025 ] Test WER: 20.55% Test del 07.30% Test ins 02.08%
+[ Tue Dec  2 02:33:00 2025 ] Best_dev: 19.71, 07.28, 02.26, Best_test: 20.39, 07.25, 02.09,Epoch : 20
+[ Tue Dec  2 02:33:00 2025 ] Epoch 21 costs 14 mins 5 seconds
+[ Tue Dec  2 02:33:00 2025 ] Training costs 3 hours 48 mins 43 seconds
+[ Tue Dec  2 02:33:08 2025 ] 	Epoch: 22, Batch(0/1417) done. Loss: 24.38161850  lr:0.000020
+[ Tue Dec  2 02:34:53 2025 ] 	Epoch: 22, Batch(200/1417) done. Loss: 11.33262634  lr:0.000020
+[ Tue Dec  2 02:36:04 2025 ] 	Epoch: 22, Batch(400/1417) done. Loss: 9.45854759  lr:0.000020
+[ Tue Dec  2 02:36:57 2025 ] 	Epoch: 22, Batch(600/1417) done. Loss: 16.46415710  lr:0.000020
+[ Tue Dec  2 02:37:50 2025 ] 	Epoch: 22, Batch(800/1417) done. Loss: 10.62479401  lr:0.000020
+[ Tue Dec  2 02:38:43 2025 ] 	Epoch: 22, Batch(1000/1417) done. Loss: 11.28370285  lr:0.000020
+[ Tue Dec  2 02:39:36 2025 ] 	Epoch: 22, Batch(1200/1417) done. Loss: 11.31734085  lr:0.000020
+[ Tue Dec  2 02:40:29 2025 ] 	Epoch: 22, Batch(1400/1417) done. Loss: 8.99731827  lr:0.000020
+[ Tue Dec  2 02:40:33 2025 ] 	Mean training loss: 13.0090888107.
+[ Tue Dec  2 02:41:41 2025 ] Dev WER: 19.58% DEV del 07.26% DEV ins 02.17%
+[ Tue Dec  2 02:41:41 2025 ] Test WER: 19.85% Test del 07.01% Test ins 02.26%
+[ Tue Dec  2 02:41:43 2025 ] Save best model
+[ Tue Dec  2 02:41:43 2025 ] Best_dev: 19.58, 07.26, 02.17, Best_test: 19.85, 07.01, 02.26,Epoch : 22
+[ Tue Dec  2 02:41:43 2025 ] Epoch 22 costs 8 mins 42 seconds
+[ Tue Dec  2 02:41:43 2025 ] Training costs 3 hours 57 mins 25 seconds
+[ Tue Dec  2 02:41:46 2025 ] 	Epoch: 23, Batch(0/1417) done. Loss: 20.27395439  lr:0.000020
+[ Tue Dec  2 02:42:49 2025 ] 	Epoch: 23, Batch(200/1417) done. Loss: 16.55480194  lr:0.000020
+[ Tue Dec  2 02:43:41 2025 ] 	Epoch: 23, Batch(400/1417) done. Loss: 13.28025341  lr:0.000020
+[ Tue Dec  2 02:44:35 2025 ] 	Epoch: 23, Batch(600/1417) done. Loss: 11.01457024  lr:0.000020
+[ Tue Dec  2 02:45:27 2025 ] 	Epoch: 23, Batch(800/1417) done. Loss: 12.50651932  lr:0.000020
+[ Tue Dec  2 02:46:20 2025 ] 	Epoch: 23, Batch(1000/1417) done. Loss: 14.08451080  lr:0.000020
+[ Tue Dec  2 02:47:12 2025 ] 	Epoch: 23, Batch(1200/1417) done. Loss: 14.62380219  lr:0.000020
+[ Tue Dec  2 02:48:05 2025 ] 	Epoch: 23, Batch(1400/1417) done. Loss: 10.81620789  lr:0.000020
+[ Tue Dec  2 02:48:09 2025 ] 	Mean training loss: 12.7635029390.
+[ Tue Dec  2 02:49:12 2025 ] Dev WER: 19.55% DEV del 06.87% DEV ins 02.29%
+[ Tue Dec  2 02:49:12 2025 ] Test WER: 19.99% Test del 06.58% Test ins 02.36%
+[ Tue Dec  2 02:49:14 2025 ] Save best model
+[ Tue Dec  2 02:49:14 2025 ] Best_dev: 19.55, 06.87, 02.29, Best_test: 19.99, 06.58, 02.36,Epoch : 23
+[ Tue Dec  2 02:49:14 2025 ] Epoch 23 costs 7 mins 31 seconds
+[ Tue Dec  2 02:49:14 2025 ] Training costs 4 hours 4 mins 56 seconds
+[ Tue Dec  2 02:49:20 2025 ] 	Epoch: 24, Batch(0/1417) done. Loss: 15.23854446  lr:0.000020
+[ Tue Dec  2 02:50:15 2025 ] 	Epoch: 24, Batch(200/1417) done. Loss: 6.39261246  lr:0.000020
+[ Tue Dec  2 02:51:50 2025 ] 	Epoch: 24, Batch(400/1417) done. Loss: 13.22463036  lr:0.000020
+[ Tue Dec  2 02:53:36 2025 ] 	Epoch: 24, Batch(600/1417) done. Loss: 12.44293976  lr:0.000020
+[ Tue Dec  2 02:55:18 2025 ] 	Epoch: 24, Batch(800/1417) done. Loss: 8.24711514  lr:0.000020
+[ Tue Dec  2 02:57:03 2025 ] 	Epoch: 24, Batch(1000/1417) done. Loss: 11.10447693  lr:0.000020
+[ Tue Dec  2 02:58:47 2025 ] 	Epoch: 24, Batch(1200/1417) done. Loss: 12.16174126  lr:0.000020
+[ Tue Dec  2 03:00:29 2025 ] 	Epoch: 24, Batch(1400/1417) done. Loss: 17.09472275  lr:0.000020
+[ Tue Dec  2 03:00:38 2025 ] 	Mean training loss: 12.4070788332.
+[ Tue Dec  2 03:02:14 2025 ] Dev WER: 19.42% DEV del 06.72% DEV ins 02.49%
+[ Tue Dec  2 03:02:14 2025 ] Test WER: 19.76% Test del 06.18% Test ins 02.17%
+[ Tue Dec  2 03:02:16 2025 ] Save best model
+[ Tue Dec  2 03:02:16 2025 ] Best_dev: 19.42, 06.72, 02.49, Best_test: 19.76, 06.18, 02.17,Epoch : 24
+[ Tue Dec  2 03:02:16 2025 ] Epoch 24 costs 13 mins 2 seconds
+[ Tue Dec  2 03:02:16 2025 ] Training costs 4 hours 17 mins 59 seconds
+[ Tue Dec  2 03:02:26 2025 ] 	Epoch: 25, Batch(0/1417) done. Loss: 8.85937405  lr:0.000020
+[ Tue Dec  2 03:04:09 2025 ] 	Epoch: 25, Batch(200/1417) done. Loss: 9.34435844  lr:0.000020
+[ Tue Dec  2 03:05:51 2025 ] 	Epoch: 25, Batch(400/1417) done. Loss: 11.43582821  lr:0.000020
+[ Tue Dec  2 03:07:34 2025 ] 	Epoch: 25, Batch(600/1417) done. Loss: 15.30491543  lr:0.000020
+[ Tue Dec  2 03:09:16 2025 ] 	Epoch: 25, Batch(800/1417) done. Loss: 16.04093933  lr:0.000020
+[ Tue Dec  2 03:11:01 2025 ] 	Epoch: 25, Batch(1000/1417) done. Loss: 11.91438961  lr:0.000020
+[ Tue Dec  2 03:12:44 2025 ] 	Epoch: 25, Batch(1200/1417) done. Loss: 14.08667564  lr:0.000020
+[ Tue Dec  2 03:14:25 2025 ] 	Epoch: 25, Batch(1400/1417) done. Loss: 11.15034103  lr:0.000020
+[ Tue Dec  2 03:14:34 2025 ] 	Mean training loss: 12.1091512644.
+[ Tue Dec  2 03:16:23 2025 ] Dev WER: 19.55% DEV del 06.79% DEV ins 02.37%
+[ Tue Dec  2 03:16:23 2025 ] Test WER: 20.33% Test del 06.73% Test ins 02.34%
+[ Tue Dec  2 03:16:23 2025 ] Best_dev: 19.42, 06.72, 02.49, Best_test: 19.76, 06.18, 02.17,Epoch : 24
+[ Tue Dec  2 03:16:23 2025 ] Epoch 25 costs 14 mins 6 seconds
+[ Tue Dec  2 03:16:23 2025 ] Training costs 4 hours 32 mins 5 seconds
+[ Tue Dec  2 03:16:29 2025 ] 	Epoch: 26, Batch(0/1417) done. Loss: 13.41504669  lr:0.000020
+[ Tue Dec  2 03:18:20 2025 ] 	Epoch: 26, Batch(200/1417) done. Loss: 7.06332588  lr:0.000020
+[ Tue Dec  2 03:20:04 2025 ] 	Epoch: 26, Batch(400/1417) done. Loss: 10.59986305  lr:0.000020
+[ Tue Dec  2 03:21:47 2025 ] 	Epoch: 26, Batch(600/1417) done. Loss: 11.99731827  lr:0.000020
+[ Tue Dec  2 03:23:27 2025 ] 	Epoch: 26, Batch(800/1417) done. Loss: 14.67653084  lr:0.000020
+[ Tue Dec  2 03:25:13 2025 ] 	Epoch: 26, Batch(1000/1417) done. Loss: 11.18805504  lr:0.000020
+[ Tue Dec  2 03:26:57 2025 ] 	Epoch: 26, Batch(1200/1417) done. Loss: 10.55750656  lr:0.000020
+[ Tue Dec  2 03:28:41 2025 ] 	Epoch: 26, Batch(1400/1417) done. Loss: 10.11006546  lr:0.000020
+[ Tue Dec  2 03:28:48 2025 ] 	Mean training loss: 11.8792404388.
+[ Tue Dec  2 03:30:50 2025 ] Dev WER: 20.00% DEV del 07.52% DEV ins 02.29%
+[ Tue Dec  2 03:30:50 2025 ] Test WER: 20.33% Test del 06.98% Test ins 02.09%
+[ Tue Dec  2 03:30:50 2025 ] Best_dev: 19.42, 06.72, 02.49, Best_test: 19.76, 06.18, 02.17,Epoch : 24
+[ Tue Dec  2 03:30:50 2025 ] Epoch 26 costs 14 mins 27 seconds
+[ Tue Dec  2 03:30:50 2025 ] Training costs 4 hours 46 mins 33 seconds
+[ Tue Dec  2 03:30:57 2025 ] 	Epoch: 27, Batch(0/1417) done. Loss: 8.64603424  lr:0.000020
+[ Tue Dec  2 03:32:49 2025 ] 	Epoch: 27, Batch(200/1417) done. Loss: 12.70179749  lr:0.000020
+[ Tue Dec  2 03:33:56 2025 ] 	Epoch: 27, Batch(400/1417) done. Loss: 7.39282513  lr:0.000020
+[ Tue Dec  2 03:34:49 2025 ] 	Epoch: 27, Batch(600/1417) done. Loss: 20.00913620  lr:0.000020
+[ Tue Dec  2 03:35:44 2025 ] 	Epoch: 27, Batch(800/1417) done. Loss: 12.97392464  lr:0.000020
+[ Tue Dec  2 03:36:38 2025 ] 	Epoch: 27, Batch(1000/1417) done. Loss: 8.07975483  lr:0.000020
+[ Tue Dec  2 03:37:32 2025 ] 	Epoch: 27, Batch(1200/1417) done. Loss: 13.12259293  lr:0.000020
+[ Tue Dec  2 03:38:29 2025 ] 	Epoch: 27, Batch(1400/1417) done. Loss: 10.87066936  lr:0.000020
+[ Tue Dec  2 03:38:47 2025 ] 	Mean training loss: 11.7764523364.
+[ Tue Dec  2 03:40:02 2025 ] Dev WER: 19.86% DEV del 07.32% DEV ins 02.24%
+[ Tue Dec  2 03:40:02 2025 ] Test WER: 20.21% Test del 06.71% Test ins 02.28%
+[ Tue Dec  2 03:40:02 2025 ] Best_dev: 19.42, 06.72, 02.49, Best_test: 19.76, 06.18, 02.17,Epoch : 24
+[ Tue Dec  2 03:40:02 2025 ] Epoch 27 costs 9 mins 12 seconds
+[ Tue Dec  2 03:40:02 2025 ] Training costs 4 hours 55 mins 45 seconds
+[ Tue Dec  2 03:40:08 2025 ] 	Epoch: 28, Batch(0/1417) done. Loss: 10.22375107  lr:0.000020
+[ Tue Dec  2 03:41:07 2025 ] 	Epoch: 28, Batch(200/1417) done. Loss: 13.53723717  lr:0.000020
+[ Tue Dec  2 03:42:01 2025 ] 	Epoch: 28, Batch(400/1417) done. Loss: 14.16902351  lr:0.000020
+[ Tue Dec  2 03:42:56 2025 ] 	Epoch: 28, Batch(600/1417) done. Loss: 13.03812695  lr:0.000020
+[ Tue Dec  2 03:43:49 2025 ] 	Epoch: 28, Batch(800/1417) done. Loss: 11.92803764  lr:0.000020
+[ Tue Dec  2 03:44:42 2025 ] 	Epoch: 28, Batch(1000/1417) done. Loss: 7.40295124  lr:0.000020
+[ Tue Dec  2 03:45:39 2025 ] 	Epoch: 28, Batch(1200/1417) done. Loss: 12.46874046  lr:0.000020
+[ Tue Dec  2 03:46:38 2025 ] 	Epoch: 28, Batch(1400/1417) done. Loss: 15.12362671  lr:0.000020
+[ Tue Dec  2 03:46:53 2025 ] 	Mean training loss: 11.5593294391.
+[ Tue Dec  2 03:48:01 2025 ] Dev WER: 19.57% DEV del 06.54% DEV ins 02.53%
+[ Tue Dec  2 03:48:01 2025 ] Test WER: 20.10% Test del 06.58% Test ins 02.28%
+[ Tue Dec  2 03:48:01 2025 ] Best_dev: 19.42, 06.72, 02.49, Best_test: 19.76, 06.18, 02.17,Epoch : 24
+[ Tue Dec  2 03:48:01 2025 ] Epoch 28 costs 7 mins 58 seconds
+[ Tue Dec  2 03:48:01 2025 ] Training costs 5 hours 3 mins 44 seconds
+[ Tue Dec  2 03:48:05 2025 ] 	Epoch: 29, Batch(0/1417) done. Loss: 14.40705204  lr:0.000020
+[ Tue Dec  2 03:49:01 2025 ] 	Epoch: 29, Batch(200/1417) done. Loss: 6.86785269  lr:0.000020
+[ Tue Dec  2 03:49:54 2025 ] 	Epoch: 29, Batch(400/1417) done. Loss: 8.91555595  lr:0.000020
+[ Tue Dec  2 03:51:44 2025 ] 	Epoch: 29, Batch(600/1417) done. Loss: 9.63409138  lr:0.000020
+[ Tue Dec  2 03:53:27 2025 ] 	Epoch: 29, Batch(800/1417) done. Loss: 14.99942207  lr:0.000020
+[ Tue Dec  2 03:55:09 2025 ] 	Epoch: 29, Batch(1000/1417) done. Loss: 12.38868999  lr:0.000020
+[ Tue Dec  2 03:56:54 2025 ] 	Epoch: 29, Batch(1200/1417) done. Loss: 9.78031635  lr:0.000020
+[ Tue Dec  2 03:58:38 2025 ] 	Epoch: 29, Batch(1400/1417) done. Loss: 15.66619396  lr:0.000020
+[ Tue Dec  2 03:58:46 2025 ] 	Mean training loss: 11.3546236906.
+[ Tue Dec  2 04:00:47 2025 ] Dev WER: 19.84% DEV del 07.46% DEV ins 02.46%
+[ Tue Dec  2 04:00:47 2025 ] Test WER: 20.27% Test del 06.73% Test ins 02.37%
+[ Tue Dec  2 04:00:47 2025 ] Best_dev: 19.42, 06.72, 02.49, Best_test: 19.76, 06.18, 02.17,Epoch : 24
+[ Tue Dec  2 04:00:47 2025 ] Epoch 29 costs 12 mins 46 seconds
+[ Tue Dec  2 04:00:47 2025 ] Training costs 5 hours 16 mins 30 seconds
+[ Tue Dec  2 04:00:54 2025 ] 	Epoch: 30, Batch(0/1417) done. Loss: 11.73798180  lr:0.000004
+[ Tue Dec  2 04:02:43 2025 ] 	Epoch: 30, Batch(200/1417) done. Loss: 11.49191189  lr:0.000004
+[ Tue Dec  2 04:04:25 2025 ] 	Epoch: 30, Batch(400/1417) done. Loss: 13.26771927  lr:0.000004
+[ Tue Dec  2 04:06:10 2025 ] 	Epoch: 30, Batch(600/1417) done. Loss: 7.92107296  lr:0.000004
+[ Tue Dec  2 04:07:53 2025 ] 	Epoch: 30, Batch(800/1417) done. Loss: 6.39475155  lr:0.000004
+[ Tue Dec  2 04:09:39 2025 ] 	Epoch: 30, Batch(1000/1417) done. Loss: 8.40457439  lr:0.000004
+[ Tue Dec  2 04:11:21 2025 ] 	Epoch: 30, Batch(1200/1417) done. Loss: 10.87128258  lr:0.000004
+[ Tue Dec  2 04:13:02 2025 ] 	Epoch: 30, Batch(1400/1417) done. Loss: 15.00278282  lr:0.000004
+[ Tue Dec  2 04:13:11 2025 ] 	Mean training loss: 10.7785168135.
+[ Tue Dec  2 04:14:38 2025 ] Dev WER: 19.06% DEV del 06.61% DEV ins 02.31%
+[ Tue Dec  2 04:14:38 2025 ] Test WER: 19.87% Test del 06.42% Test ins 02.23%
+[ Tue Dec  2 04:14:40 2025 ] Save best model
+[ Tue Dec  2 04:14:40 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 04:14:40 2025 ] Epoch 30 costs 13 mins 52 seconds
+[ Tue Dec  2 04:14:40 2025 ] Training costs 5 hours 30 mins 23 seconds
+[ Tue Dec  2 04:14:49 2025 ] 	Epoch: 31, Batch(0/1417) done. Loss: 14.06302261  lr:0.000004
+[ Tue Dec  2 04:16:32 2025 ] 	Epoch: 31, Batch(200/1417) done. Loss: 7.89983892  lr:0.000004
+[ Tue Dec  2 04:18:14 2025 ] 	Epoch: 31, Batch(400/1417) done. Loss: 8.21467590  lr:0.000004
+[ Tue Dec  2 04:19:58 2025 ] 	Epoch: 31, Batch(600/1417) done. Loss: 9.20866394  lr:0.000004
+[ Tue Dec  2 04:21:42 2025 ] 	Epoch: 31, Batch(800/1417) done. Loss: 8.79540825  lr:0.000004
+[ Tue Dec  2 04:23:22 2025 ] 	Epoch: 31, Batch(1000/1417) done. Loss: 10.77928734  lr:0.000004
+[ Tue Dec  2 04:25:06 2025 ] 	Epoch: 31, Batch(1200/1417) done. Loss: 9.20970821  lr:0.000004
+[ Tue Dec  2 04:26:50 2025 ] 	Epoch: 31, Batch(1400/1417) done. Loss: 7.71747589  lr:0.000004
+[ Tue Dec  2 04:26:58 2025 ] 	Mean training loss: 10.6557225696.
+[ Tue Dec  2 04:28:46 2025 ] Dev WER: 19.42% DEV del 06.94% DEV ins 02.28%
+[ Tue Dec  2 04:28:46 2025 ] Test WER: 19.81% Test del 06.75% Test ins 02.23%
+[ Tue Dec  2 04:28:46 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 04:28:46 2025 ] Epoch 31 costs 14 mins 5 seconds
+[ Tue Dec  2 04:28:46 2025 ] Training costs 5 hours 44 mins 28 seconds
+[ Tue Dec  2 04:28:54 2025 ] 	Epoch: 32, Batch(0/1417) done. Loss: 16.77873421  lr:0.000004
+[ Tue Dec  2 04:30:37 2025 ] 	Epoch: 32, Batch(200/1417) done. Loss: 6.57984161  lr:0.000004
+[ Tue Dec  2 04:32:22 2025 ] 	Epoch: 32, Batch(400/1417) done. Loss: 11.41046429  lr:0.000004
+[ Tue Dec  2 04:33:53 2025 ] 	Epoch: 32, Batch(600/1417) done. Loss: 10.50648689  lr:0.000004
+[ Tue Dec  2 04:34:46 2025 ] 	Epoch: 32, Batch(800/1417) done. Loss: 9.65094185  lr:0.000004
+[ Tue Dec  2 04:35:37 2025 ] 	Epoch: 32, Batch(1000/1417) done. Loss: 10.50104618  lr:0.000004
+[ Tue Dec  2 04:36:37 2025 ] 	Epoch: 32, Batch(1200/1417) done. Loss: 14.42147446  lr:0.000004
+[ Tue Dec  2 04:37:39 2025 ] 	Epoch: 32, Batch(1400/1417) done. Loss: 11.97934341  lr:0.000004
+[ Tue Dec  2 04:37:43 2025 ] 	Mean training loss: 10.5737629018.
+[ Tue Dec  2 04:39:02 2025 ] Dev WER: 19.64% DEV del 07.28% DEV ins 02.35%
+[ Tue Dec  2 04:39:02 2025 ] Test WER: 19.71% Test del 06.75% Test ins 02.13%
+[ Tue Dec  2 04:39:02 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 04:39:02 2025 ] Epoch 32 costs 10 mins 15 seconds
+[ Tue Dec  2 04:39:02 2025 ] Training costs 5 hours 54 mins 44 seconds
+[ Tue Dec  2 04:39:09 2025 ] 	Epoch: 33, Batch(0/1417) done. Loss: 17.66626167  lr:0.000004
+[ Tue Dec  2 04:40:09 2025 ] 	Epoch: 33, Batch(200/1417) done. Loss: 9.36448002  lr:0.000004
+[ Tue Dec  2 04:41:01 2025 ] 	Epoch: 33, Batch(400/1417) done. Loss: 7.56737852  lr:0.000004
+[ Tue Dec  2 04:41:55 2025 ] 	Epoch: 33, Batch(600/1417) done. Loss: 10.27165127  lr:0.000004
+[ Tue Dec  2 04:42:54 2025 ] 	Epoch: 33, Batch(800/1417) done. Loss: 11.85943031  lr:0.000004
+[ Tue Dec  2 04:43:47 2025 ] 	Epoch: 33, Batch(1000/1417) done. Loss: 8.05452919  lr:0.000004
+[ Tue Dec  2 04:44:45 2025 ] 	Epoch: 33, Batch(1200/1417) done. Loss: 10.66584492  lr:0.000004
+[ Tue Dec  2 04:45:38 2025 ] 	Epoch: 33, Batch(1400/1417) done. Loss: 9.33981609  lr:0.000004
+[ Tue Dec  2 04:45:42 2025 ] 	Mean training loss: 10.5078954007.
+[ Tue Dec  2 04:46:57 2025 ] Dev WER: 19.22% DEV del 06.90% DEV ins 02.33%
+[ Tue Dec  2 04:46:57 2025 ] Test WER: 19.67% Test del 06.64% Test ins 02.17%
+[ Tue Dec  2 04:46:57 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 04:46:57 2025 ] Epoch 33 costs 7 mins 55 seconds
+[ Tue Dec  2 04:46:57 2025 ] Training costs 6 hours 2 mins 39 seconds
+[ Tue Dec  2 04:47:01 2025 ] 	Epoch: 34, Batch(0/1417) done. Loss: 13.92903805  lr:0.000004
+[ Tue Dec  2 04:47:56 2025 ] 	Epoch: 34, Batch(200/1417) done. Loss: 8.37488365  lr:0.000004
+[ Tue Dec  2 04:48:49 2025 ] 	Epoch: 34, Batch(400/1417) done. Loss: 10.28724098  lr:0.000004
+[ Tue Dec  2 04:49:41 2025 ] 	Epoch: 34, Batch(600/1417) done. Loss: 13.30230141  lr:0.000004
+[ Tue Dec  2 04:51:09 2025 ] 	Epoch: 34, Batch(800/1417) done. Loss: 8.73626995  lr:0.000004
+[ Tue Dec  2 04:52:50 2025 ] 	Epoch: 34, Batch(1000/1417) done. Loss: 9.74250031  lr:0.000004
+[ Tue Dec  2 04:54:35 2025 ] 	Epoch: 34, Batch(1200/1417) done. Loss: 10.63291359  lr:0.000004
+[ Tue Dec  2 04:56:17 2025 ] 	Epoch: 34, Batch(1400/1417) done. Loss: 9.24724197  lr:0.000004
+[ Tue Dec  2 04:56:26 2025 ] 	Mean training loss: 10.5166232191.
+[ Tue Dec  2 04:58:17 2025 ] Dev WER: 19.17% DEV del 06.88% DEV ins 02.31%
+[ Tue Dec  2 04:58:17 2025 ] Test WER: 19.88% Test del 06.87% Test ins 02.16%
+[ Tue Dec  2 04:58:17 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 04:58:17 2025 ] Epoch 34 costs 11 mins 19 seconds
+[ Tue Dec  2 04:58:17 2025 ] Training costs 6 hours 13 mins 59 seconds
+[ Tue Dec  2 04:58:23 2025 ] 	Epoch: 35, Batch(0/1417) done. Loss: 10.64182091  lr:0.000001
+[ Tue Dec  2 05:00:12 2025 ] 	Epoch: 35, Batch(200/1417) done. Loss: 10.25522614  lr:0.000001
+[ Tue Dec  2 05:01:55 2025 ] 	Epoch: 35, Batch(400/1417) done. Loss: 10.57513142  lr:0.000001
+[ Tue Dec  2 05:03:38 2025 ] 	Epoch: 35, Batch(600/1417) done. Loss: 9.66384888  lr:0.000001
+[ Tue Dec  2 05:05:22 2025 ] 	Epoch: 35, Batch(800/1417) done. Loss: 8.21246338  lr:0.000001
+[ Tue Dec  2 05:07:02 2025 ] 	Epoch: 35, Batch(1000/1417) done. Loss: 7.75805235  lr:0.000001
+[ Tue Dec  2 05:08:44 2025 ] 	Epoch: 35, Batch(1200/1417) done. Loss: 10.79880714  lr:0.000001
+[ Tue Dec  2 05:10:29 2025 ] 	Epoch: 35, Batch(1400/1417) done. Loss: 17.21022224  lr:0.000001
+[ Tue Dec  2 05:10:37 2025 ] 	Mean training loss: 10.4722811232.
+[ Tue Dec  2 05:12:35 2025 ] Dev WER: 19.40% DEV del 07.05% DEV ins 02.35%
+[ Tue Dec  2 05:12:35 2025 ] Test WER: 19.85% Test del 07.01% Test ins 02.05%
+[ Tue Dec  2 05:12:35 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 05:12:35 2025 ] Epoch 35 costs 14 mins 18 seconds
+[ Tue Dec  2 05:12:35 2025 ] Training costs 6 hours 28 mins 17 seconds
+[ Tue Dec  2 05:12:47 2025 ] 	Epoch: 36, Batch(0/1417) done. Loss: 20.71035385  lr:0.000001
+[ Tue Dec  2 05:14:31 2025 ] 	Epoch: 36, Batch(200/1417) done. Loss: 7.39262199  lr:0.000001
+[ Tue Dec  2 05:16:15 2025 ] 	Epoch: 36, Batch(400/1417) done. Loss: 8.13120747  lr:0.000001
+[ Tue Dec  2 05:18:01 2025 ] 	Epoch: 36, Batch(600/1417) done. Loss: 17.83110237  lr:0.000001
+[ Tue Dec  2 05:19:44 2025 ] 	Epoch: 36, Batch(800/1417) done. Loss: 12.21541214  lr:0.000001
+[ Tue Dec  2 05:21:25 2025 ] 	Epoch: 36, Batch(1000/1417) done. Loss: 10.17275047  lr:0.000001
+[ Tue Dec  2 05:23:06 2025 ] 	Epoch: 36, Batch(1200/1417) done. Loss: 10.50626564  lr:0.000001
+[ Tue Dec  2 05:24:50 2025 ] 	Epoch: 36, Batch(1400/1417) done. Loss: 11.14459419  lr:0.000001
+[ Tue Dec  2 05:24:57 2025 ] 	Mean training loss: 10.4013987230.
+[ Tue Dec  2 05:26:33 2025 ] Dev WER: 19.39% DEV del 06.78% DEV ins 02.51%
+[ Tue Dec  2 05:26:33 2025 ] Test WER: 19.87% Test del 06.56% Test ins 02.28%
+[ Tue Dec  2 05:26:33 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 05:26:33 2025 ] Epoch 36 costs 13 mins 57 seconds
+[ Tue Dec  2 05:26:33 2025 ] Training costs 6 hours 42 mins 15 seconds
+[ Tue Dec  2 05:26:40 2025 ] 	Epoch: 37, Batch(0/1417) done. Loss: 8.32399368  lr:0.000001
+[ Tue Dec  2 05:28:26 2025 ] 	Epoch: 37, Batch(200/1417) done. Loss: 6.92673492  lr:0.000001
+[ Tue Dec  2 05:30:12 2025 ] 	Epoch: 37, Batch(400/1417) done. Loss: 4.81596851  lr:0.000001
+[ Tue Dec  2 05:31:54 2025 ] 	Epoch: 37, Batch(600/1417) done. Loss: 11.24861526  lr:0.000001
+[ Tue Dec  2 05:33:32 2025 ] 	Epoch: 37, Batch(800/1417) done. Loss: 8.57155609  lr:0.000001
+[ Tue Dec  2 05:34:25 2025 ] 	Epoch: 37, Batch(1000/1417) done. Loss: 10.65292931  lr:0.000001
+[ Tue Dec  2 05:35:21 2025 ] 	Epoch: 37, Batch(1200/1417) done. Loss: 7.98998451  lr:0.000001
+[ Tue Dec  2 05:36:24 2025 ] 	Epoch: 37, Batch(1400/1417) done. Loss: 7.16722870  lr:0.000001
+[ Tue Dec  2 05:36:28 2025 ] 	Mean training loss: 10.3496603649.
+[ Tue Dec  2 05:37:55 2025 ] Dev WER: 19.37% DEV del 06.87% DEV ins 02.35%
+[ Tue Dec  2 05:37:55 2025 ] Test WER: 19.78% Test del 06.81% Test ins 02.23%
+[ Tue Dec  2 05:37:55 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 05:37:55 2025 ] Epoch 37 costs 11 mins 22 seconds
+[ Tue Dec  2 05:37:55 2025 ] Training costs 6 hours 53 mins 37 seconds
+[ Tue Dec  2 05:37:59 2025 ] 	Epoch: 38, Batch(0/1417) done. Loss: 12.53246403  lr:0.000001
+[ Tue Dec  2 05:38:54 2025 ] 	Epoch: 38, Batch(200/1417) done. Loss: 8.08046150  lr:0.000001
+[ Tue Dec  2 05:39:49 2025 ] 	Epoch: 38, Batch(400/1417) done. Loss: 7.43012333  lr:0.000001
+[ Tue Dec  2 05:40:43 2025 ] 	Epoch: 38, Batch(600/1417) done. Loss: 8.96112251  lr:0.000001
+[ Tue Dec  2 05:41:38 2025 ] 	Epoch: 38, Batch(800/1417) done. Loss: 11.66363335  lr:0.000001
+[ Tue Dec  2 05:42:40 2025 ] 	Epoch: 38, Batch(1000/1417) done. Loss: 8.37121677  lr:0.000001
+[ Tue Dec  2 05:43:32 2025 ] 	Epoch: 38, Batch(1200/1417) done. Loss: 10.08746338  lr:0.000001
+[ Tue Dec  2 05:44:31 2025 ] 	Epoch: 38, Batch(1400/1417) done. Loss: 11.15786934  lr:0.000001
+[ Tue Dec  2 05:44:35 2025 ] 	Mean training loss: 10.4010002416.
+[ Tue Dec  2 05:45:47 2025 ] Dev WER: 19.30% DEV del 06.78% DEV ins 02.40%
+[ Tue Dec  2 05:45:47 2025 ] Test WER: 19.82% Test del 06.51% Test ins 02.31%
+[ Tue Dec  2 05:45:47 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 05:45:47 2025 ] Epoch 38 costs 7 mins 51 seconds
+[ Tue Dec  2 05:45:47 2025 ] Training costs 7 hours 1 mins 29 seconds
+[ Tue Dec  2 05:45:50 2025 ] 	Epoch: 39, Batch(0/1417) done. Loss: 12.78570843  lr:0.000001
+[ Tue Dec  2 05:46:53 2025 ] 	Epoch: 39, Batch(200/1417) done. Loss: 7.50396395  lr:0.000001
+[ Tue Dec  2 05:47:50 2025 ] 	Epoch: 39, Batch(400/1417) done. Loss: 7.79995155  lr:0.000001
+[ Tue Dec  2 05:48:45 2025 ] 	Epoch: 39, Batch(600/1417) done. Loss: 10.91112709  lr:0.000001
+[ Tue Dec  2 05:49:45 2025 ] 	Epoch: 39, Batch(800/1417) done. Loss: 13.04720688  lr:0.000001
+[ Tue Dec  2 05:50:39 2025 ] 	Epoch: 39, Batch(1000/1417) done. Loss: 14.09378815  lr:0.000001
+[ Tue Dec  2 05:51:50 2025 ] 	Epoch: 39, Batch(1200/1417) done. Loss: 12.30626583  lr:0.000001
+[ Tue Dec  2 05:52:43 2025 ] 	Epoch: 39, Batch(1400/1417) done. Loss: 11.47670937  lr:0.000001
+[ Tue Dec  2 05:52:47 2025 ] 	Mean training loss: 10.3074101863.
+[ Tue Dec  2 05:54:01 2025 ] Dev WER: 19.39% DEV del 06.96% DEV ins 02.49%
+[ Tue Dec  2 05:54:01 2025 ] Test WER: 19.94% Test del 06.84% Test ins 02.26%
+[ Tue Dec  2 05:54:01 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 05:54:01 2025 ] Epoch 39 costs 8 mins 13 seconds
+[ Tue Dec  2 05:54:01 2025 ] Training costs 7 hours 9 mins 43 seconds
+[ Tue Dec  2 05:54:08 2025 ] 	Epoch: 40, Batch(0/1417) done. Loss: 10.02997589  lr:0.000001
+[ Tue Dec  2 05:55:05 2025 ] 	Epoch: 40, Batch(200/1417) done. Loss: 9.29537010  lr:0.000001
+[ Tue Dec  2 05:55:59 2025 ] 	Epoch: 40, Batch(400/1417) done. Loss: 8.60608768  lr:0.000001
+[ Tue Dec  2 05:56:53 2025 ] 	Epoch: 40, Batch(600/1417) done. Loss: 7.70895290  lr:0.000001
+[ Tue Dec  2 05:57:52 2025 ] 	Epoch: 40, Batch(800/1417) done. Loss: 16.41910172  lr:0.000001
+[ Tue Dec  2 05:58:44 2025 ] 	Epoch: 40, Batch(1000/1417) done. Loss: 8.68978882  lr:0.000001
+[ Tue Dec  2 05:59:39 2025 ] 	Epoch: 40, Batch(1200/1417) done. Loss: 13.73650551  lr:0.000001
+[ Tue Dec  2 06:00:34 2025 ] 	Epoch: 40, Batch(1400/1417) done. Loss: 13.98244858  lr:0.000001
+[ Tue Dec  2 06:00:38 2025 ] 	Mean training loss: 10.2321503645.
+[ Tue Dec  2 06:01:52 2025 ] Dev WER: 19.30% DEV del 07.14% DEV ins 02.31%
+[ Tue Dec  2 06:01:52 2025 ] Test WER: 19.96% Test del 06.98% Test ins 02.19%
+[ Tue Dec  2 06:01:52 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 06:01:52 2025 ] Epoch 40 costs 7 mins 50 seconds
+[ Tue Dec  2 06:01:52 2025 ] Training costs 7 hours 17 mins 34 seconds
+[ Tue Dec  2 06:01:58 2025 ] 	Epoch: 41, Batch(0/1417) done. Loss: 13.75348568  lr:0.000001
+[ Tue Dec  2 06:02:57 2025 ] 	Epoch: 41, Batch(200/1417) done. Loss: 10.03754425  lr:0.000001
+[ Tue Dec  2 06:03:49 2025 ] 	Epoch: 41, Batch(400/1417) done. Loss: 13.82906914  lr:0.000001
+[ Tue Dec  2 06:04:42 2025 ] 	Epoch: 41, Batch(600/1417) done. Loss: 12.04404545  lr:0.000001
+[ Tue Dec  2 06:05:42 2025 ] 	Epoch: 41, Batch(800/1417) done. Loss: 6.19489431  lr:0.000001
+[ Tue Dec  2 06:06:36 2025 ] 	Epoch: 41, Batch(1000/1417) done. Loss: 15.41133308  lr:0.000001
+[ Tue Dec  2 06:07:29 2025 ] 	Epoch: 41, Batch(1200/1417) done. Loss: 7.39208508  lr:0.000001
+[ Tue Dec  2 06:08:36 2025 ] 	Epoch: 41, Batch(1400/1417) done. Loss: 9.34583187  lr:0.000001
+[ Tue Dec  2 06:08:41 2025 ] 	Mean training loss: 10.2923838872.
+[ Tue Dec  2 06:10:29 2025 ] Dev WER: 19.44% DEV del 06.74% DEV ins 02.48%
+[ Tue Dec  2 06:10:29 2025 ] Test WER: 19.59% Test del 06.56% Test ins 02.36%
+[ Tue Dec  2 06:10:29 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 06:10:29 2025 ] Epoch 41 costs 8 mins 37 seconds
+[ Tue Dec  2 06:10:29 2025 ] Training costs 7 hours 26 mins 11 seconds
+[ Tue Dec  2 06:10:39 2025 ] 	Epoch: 42, Batch(0/1417) done. Loss: 13.45229149  lr:0.000001
+[ Tue Dec  2 06:12:24 2025 ] 	Epoch: 42, Batch(200/1417) done. Loss: 11.39877224  lr:0.000001
+[ Tue Dec  2 06:14:07 2025 ] 	Epoch: 42, Batch(400/1417) done. Loss: 11.63949394  lr:0.000001
+[ Tue Dec  2 06:15:51 2025 ] 	Epoch: 42, Batch(600/1417) done. Loss: 8.75205994  lr:0.000001
+[ Tue Dec  2 06:17:30 2025 ] 	Epoch: 42, Batch(800/1417) done. Loss: 9.52508259  lr:0.000001
+[ Tue Dec  2 06:19:12 2025 ] 	Epoch: 42, Batch(1000/1417) done. Loss: 10.21896744  lr:0.000001
+[ Tue Dec  2 06:20:54 2025 ] 	Epoch: 42, Batch(1200/1417) done. Loss: 7.67490387  lr:0.000001
+[ Tue Dec  2 06:22:40 2025 ] 	Epoch: 42, Batch(1400/1417) done. Loss: 8.71163940  lr:0.000001
+[ Tue Dec  2 06:22:49 2025 ] 	Mean training loss: 10.3336906490.
+[ Tue Dec  2 06:24:40 2025 ] Dev WER: 19.35% DEV del 07.12% DEV ins 02.26%
+[ Tue Dec  2 06:24:40 2025 ] Test WER: 19.82% Test del 06.81% Test ins 02.14%
+[ Tue Dec  2 06:24:40 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 06:24:40 2025 ] Epoch 42 costs 14 mins 10 seconds
+[ Tue Dec  2 06:24:40 2025 ] Training costs 7 hours 40 mins 22 seconds
+[ Tue Dec  2 06:24:45 2025 ] 	Epoch: 43, Batch(0/1417) done. Loss: 11.06643867  lr:0.000001
+[ Tue Dec  2 06:26:33 2025 ] 	Epoch: 43, Batch(200/1417) done. Loss: 8.96980286  lr:0.000001
+[ Tue Dec  2 06:28:12 2025 ] 	Epoch: 43, Batch(400/1417) done. Loss: 9.04739857  lr:0.000001
+[ Tue Dec  2 06:29:56 2025 ] 	Epoch: 43, Batch(600/1417) done. Loss: 12.28386688  lr:0.000001
+[ Tue Dec  2 06:31:39 2025 ] 	Epoch: 43, Batch(800/1417) done. Loss: 6.58524561  lr:0.000001
+[ Tue Dec  2 06:33:23 2025 ] 	Epoch: 43, Batch(1000/1417) done. Loss: 8.11809921  lr:0.000001
+[ Tue Dec  2 06:35:04 2025 ] 	Epoch: 43, Batch(1200/1417) done. Loss: 8.63831139  lr:0.000001
+[ Tue Dec  2 06:36:43 2025 ] 	Epoch: 43, Batch(1400/1417) done. Loss: 5.59161043  lr:0.000001
+[ Tue Dec  2 06:36:51 2025 ] 	Mean training loss: 10.2273938738.
+[ Tue Dec  2 06:38:37 2025 ] Dev WER: 19.31% DEV del 06.67% DEV ins 02.49%
+[ Tue Dec  2 06:38:37 2025 ] Test WER: 19.70% Test del 06.61% Test ins 02.33%
+[ Tue Dec  2 06:38:37 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 06:38:37 2025 ] Epoch 43 costs 13 mins 57 seconds
+[ Tue Dec  2 06:38:37 2025 ] Training costs 7 hours 54 mins 19 seconds
+[ Tue Dec  2 06:38:42 2025 ] 	Epoch: 44, Batch(0/1417) done. Loss: 7.88135529  lr:0.000001
+[ Tue Dec  2 06:40:30 2025 ] 	Epoch: 44, Batch(200/1417) done. Loss: 9.81113243  lr:0.000001
+[ Tue Dec  2 06:42:14 2025 ] 	Epoch: 44, Batch(400/1417) done. Loss: 8.51779461  lr:0.000001
+[ Tue Dec  2 06:43:57 2025 ] 	Epoch: 44, Batch(600/1417) done. Loss: 9.66896534  lr:0.000001
+[ Tue Dec  2 06:45:39 2025 ] 	Epoch: 44, Batch(800/1417) done. Loss: 7.40772200  lr:0.000001
+[ Tue Dec  2 06:47:23 2025 ] 	Epoch: 44, Batch(1000/1417) done. Loss: 8.49074364  lr:0.000001
+[ Tue Dec  2 06:49:06 2025 ] 	Epoch: 44, Batch(1200/1417) done. Loss: 8.42301464  lr:0.000001
+[ Tue Dec  2 06:50:48 2025 ] 	Epoch: 44, Batch(1400/1417) done. Loss: 15.57822800  lr:0.000001
+[ Tue Dec  2 06:50:56 2025 ] 	Mean training loss: 10.3433068329.
+[ Tue Dec  2 06:52:22 2025 ] Dev WER: 19.35% DEV del 07.12% DEV ins 02.31%
+[ Tue Dec  2 06:52:22 2025 ] Test WER: 19.99% Test del 06.82% Test ins 02.23%
+[ Tue Dec  2 06:52:22 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 06:52:22 2025 ] Epoch 44 costs 13 mins 45 seconds
+[ Tue Dec  2 06:52:22 2025 ] Training costs 8 hours 8 mins 4 seconds
+[ Tue Dec  2 06:52:26 2025 ] 	Epoch: 45, Batch(0/1417) done. Loss: 8.40143394  lr:0.000001
+[ Tue Dec  2 06:53:28 2025 ] 	Epoch: 45, Batch(200/1417) done. Loss: 6.18044281  lr:0.000001
+[ Tue Dec  2 06:54:20 2025 ] 	Epoch: 45, Batch(400/1417) done. Loss: 10.24938774  lr:0.000001
+[ Tue Dec  2 06:55:40 2025 ] 	Epoch: 45, Batch(600/1417) done. Loss: 10.79485893  lr:0.000001
+[ Tue Dec  2 06:56:32 2025 ] 	Epoch: 45, Batch(800/1417) done. Loss: 10.02444363  lr:0.000001
+[ Tue Dec  2 06:57:35 2025 ] 	Epoch: 45, Batch(1000/1417) done. Loss: 13.62671185  lr:0.000001
+[ Tue Dec  2 06:58:49 2025 ] 	Epoch: 45, Batch(1200/1417) done. Loss: 9.27778339  lr:0.000001
+[ Tue Dec  2 06:59:43 2025 ] 	Epoch: 45, Batch(1400/1417) done. Loss: 6.75732374  lr:0.000001
+[ Tue Dec  2 06:59:47 2025 ] 	Mean training loss: 10.2536296357.
+[ Tue Dec  2 07:00:53 2025 ] Dev WER: 19.42% DEV del 07.14% DEV ins 02.29%
+[ Tue Dec  2 07:00:53 2025 ] Test WER: 19.84% Test del 06.90% Test ins 02.11%
+[ Tue Dec  2 07:00:53 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 07:00:53 2025 ] Epoch 45 costs 8 mins 31 seconds
+[ Tue Dec  2 07:00:53 2025 ] Training costs 8 hours 16 mins 35 seconds
+[ Tue Dec  2 07:00:59 2025 ] 	Epoch: 46, Batch(0/1417) done. Loss: 7.34938622  lr:0.000001
+[ Tue Dec  2 07:01:58 2025 ] 	Epoch: 46, Batch(200/1417) done. Loss: 11.24169922  lr:0.000001
+[ Tue Dec  2 07:02:50 2025 ] 	Epoch: 46, Batch(400/1417) done. Loss: 6.54856396  lr:0.000001
+[ Tue Dec  2 07:03:42 2025 ] 	Epoch: 46, Batch(600/1417) done. Loss: 9.76601791  lr:0.000001
+[ Tue Dec  2 07:04:36 2025 ] 	Epoch: 46, Batch(800/1417) done. Loss: 9.03999519  lr:0.000001
+[ Tue Dec  2 07:05:37 2025 ] 	Epoch: 46, Batch(1000/1417) done. Loss: 11.47452831  lr:0.000001
+[ Tue Dec  2 07:06:29 2025 ] 	Epoch: 46, Batch(1200/1417) done. Loss: 6.40510798  lr:0.000001
+[ Tue Dec  2 07:07:32 2025 ] 	Epoch: 46, Batch(1400/1417) done. Loss: 9.31552029  lr:0.000001
+[ Tue Dec  2 07:07:37 2025 ] 	Mean training loss: 10.2728035896.
+[ Tue Dec  2 07:09:15 2025 ] Dev WER: 19.19% DEV del 06.79% DEV ins 02.38%
+[ Tue Dec  2 07:09:15 2025 ] Test WER: 19.96% Test del 06.85% Test ins 02.25%
+[ Tue Dec  2 07:09:15 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 07:09:15 2025 ] Epoch 46 costs 8 mins 21 seconds
+[ Tue Dec  2 07:09:15 2025 ] Training costs 8 hours 24 mins 56 seconds
+[ Tue Dec  2 07:09:18 2025 ] 	Epoch: 47, Batch(0/1417) done. Loss: 11.71459103  lr:0.000001
+[ Tue Dec  2 07:11:06 2025 ] 	Epoch: 47, Batch(200/1417) done. Loss: 6.32622719  lr:0.000001
+[ Tue Dec  2 07:12:48 2025 ] 	Epoch: 47, Batch(400/1417) done. Loss: 7.36982822  lr:0.000001
+[ Tue Dec  2 07:14:29 2025 ] 	Epoch: 47, Batch(600/1417) done. Loss: 21.58882332  lr:0.000001
+[ Tue Dec  2 07:16:09 2025 ] 	Epoch: 47, Batch(800/1417) done. Loss: 8.75904751  lr:0.000001
+[ Tue Dec  2 07:17:51 2025 ] 	Epoch: 47, Batch(1000/1417) done. Loss: 7.95976925  lr:0.000001
+[ Tue Dec  2 07:19:33 2025 ] 	Epoch: 47, Batch(1200/1417) done. Loss: 10.14809799  lr:0.000001
+[ Tue Dec  2 07:21:17 2025 ] 	Epoch: 47, Batch(1400/1417) done. Loss: 10.25967026  lr:0.000001
+[ Tue Dec  2 07:21:25 2025 ] 	Mean training loss: 10.3103298609.
+[ Tue Dec  2 07:23:05 2025 ] Dev WER: 19.28% DEV del 06.90% DEV ins 02.44%
+[ Tue Dec  2 07:23:05 2025 ] Test WER: 19.82% Test del 06.62% Test ins 02.31%
+[ Tue Dec  2 07:23:05 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 07:23:05 2025 ] Epoch 47 costs 13 mins 50 seconds
+[ Tue Dec  2 07:23:05 2025 ] Training costs 8 hours 38 mins 47 seconds
+[ Tue Dec  2 07:23:13 2025 ] 	Epoch: 48, Batch(0/1417) done. Loss: 10.39139938  lr:0.000001
+[ Tue Dec  2 07:24:56 2025 ] 	Epoch: 48, Batch(200/1417) done. Loss: 11.04834843  lr:0.000001
+[ Tue Dec  2 07:26:39 2025 ] 	Epoch: 48, Batch(400/1417) done. Loss: 8.80963516  lr:0.000001
+[ Tue Dec  2 07:28:21 2025 ] 	Epoch: 48, Batch(600/1417) done. Loss: 12.71943855  lr:0.000001
+[ Tue Dec  2 07:30:04 2025 ] 	Epoch: 48, Batch(800/1417) done. Loss: 7.75201893  lr:0.000001
+[ Tue Dec  2 07:31:49 2025 ] 	Epoch: 48, Batch(1000/1417) done. Loss: 6.73062611  lr:0.000001
+[ Tue Dec  2 07:33:32 2025 ] 	Epoch: 48, Batch(1200/1417) done. Loss: 11.23636818  lr:0.000001
+[ Tue Dec  2 07:35:14 2025 ] 	Epoch: 48, Batch(1400/1417) done. Loss: 11.05227757  lr:0.000001
+[ Tue Dec  2 07:35:23 2025 ] 	Mean training loss: 10.1768003442.
+[ Tue Dec  2 07:37:12 2025 ] Dev WER: 19.21% DEV del 06.76% DEV ins 02.35%
+[ Tue Dec  2 07:37:12 2025 ] Test WER: 19.71% Test del 06.65% Test ins 02.22%
+[ Tue Dec  2 07:37:12 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 07:37:12 2025 ] Epoch 48 costs 14 mins 6 seconds
+[ Tue Dec  2 07:37:12 2025 ] Training costs 8 hours 52 mins 53 seconds
+[ Tue Dec  2 07:37:28 2025 ] 	Epoch: 49, Batch(0/1417) done. Loss: 10.91848946  lr:0.000001
+[ Tue Dec  2 07:39:12 2025 ] 	Epoch: 49, Batch(200/1417) done. Loss: 9.24812698  lr:0.000001
+[ Tue Dec  2 07:40:52 2025 ] 	Epoch: 49, Batch(400/1417) done. Loss: 10.15494251  lr:0.000001
+[ Tue Dec  2 07:42:34 2025 ] 	Epoch: 49, Batch(600/1417) done. Loss: 13.55513382  lr:0.000001
+[ Tue Dec  2 07:44:14 2025 ] 	Epoch: 49, Batch(800/1417) done. Loss: 10.13185406  lr:0.000001
+[ Tue Dec  2 07:45:59 2025 ] 	Epoch: 49, Batch(1000/1417) done. Loss: 7.90256310  lr:0.000001
+[ Tue Dec  2 07:47:45 2025 ] 	Epoch: 49, Batch(1200/1417) done. Loss: 12.48834229  lr:0.000001
+[ Tue Dec  2 07:49:25 2025 ] 	Epoch: 49, Batch(1400/1417) done. Loss: 8.93023682  lr:0.000001
+[ Tue Dec  2 07:49:33 2025 ] 	Mean training loss: 10.1800978609.
+[ Tue Dec  2 07:51:16 2025 ] Dev WER: 19.37% DEV del 06.68% DEV ins 02.51%
+[ Tue Dec  2 07:51:16 2025 ] Test WER: 19.68% Test del 06.51% Test ins 02.23%
+[ Tue Dec  2 07:51:16 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 07:51:16 2025 ] Epoch 49 costs 14 mins 4 seconds
+[ Tue Dec  2 07:51:16 2025 ] Training costs 9 hours 6 mins 58 seconds
+[ Tue Dec  2 07:51:23 2025 ] 	Epoch: 50, Batch(0/1417) done. Loss: 20.35607719  lr:0.000001
+[ Tue Dec  2 07:52:20 2025 ] 	Epoch: 50, Batch(200/1417) done. Loss: 9.09161186  lr:0.000001
+[ Tue Dec  2 07:53:28 2025 ] 	Epoch: 50, Batch(400/1417) done. Loss: 7.47435570  lr:0.000001
+[ Tue Dec  2 07:54:31 2025 ] 	Epoch: 50, Batch(600/1417) done. Loss: 10.50117779  lr:0.000001
+[ Tue Dec  2 07:55:28 2025 ] 	Epoch: 50, Batch(800/1417) done. Loss: 9.25486755  lr:0.000001
+[ Tue Dec  2 07:56:27 2025 ] 	Epoch: 50, Batch(1000/1417) done. Loss: 9.19148827  lr:0.000001
+[ Tue Dec  2 07:57:36 2025 ] 	Epoch: 50, Batch(1200/1417) done. Loss: 8.31589127  lr:0.000001
+[ Tue Dec  2 07:59:02 2025 ] 	Epoch: 50, Batch(1400/1417) done. Loss: 16.92726898  lr:0.000001
+[ Tue Dec  2 07:59:06 2025 ] 	Mean training loss: 10.2244442695.
+[ Tue Dec  2 08:00:26 2025 ] Dev WER: 19.31% DEV del 06.70% DEV ins 02.46%
+[ Tue Dec  2 08:00:26 2025 ] Test WER: 19.85% Test del 06.55% Test ins 02.36%
+[ Tue Dec  2 08:00:26 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 08:00:27 2025 ] Epoch 50 costs 9 mins 10 seconds
+[ Tue Dec  2 08:00:27 2025 ] Training costs 9 hours 16 mins 9 seconds
+[ Tue Dec  2 08:00:30 2025 ] 	Epoch: 51, Batch(0/1417) done. Loss: 12.02170181  lr:0.000001
+[ Tue Dec  2 08:01:28 2025 ] 	Epoch: 51, Batch(200/1417) done. Loss: 8.51401901  lr:0.000001
+[ Tue Dec  2 08:02:27 2025 ] 	Epoch: 51, Batch(400/1417) done. Loss: 8.93697071  lr:0.000001
+[ Tue Dec  2 08:03:36 2025 ] 	Epoch: 51, Batch(600/1417) done. Loss: 12.62265778  lr:0.000001
+[ Tue Dec  2 08:04:28 2025 ] 	Epoch: 51, Batch(800/1417) done. Loss: 9.17333031  lr:0.000001
+[ Tue Dec  2 08:05:25 2025 ] 	Epoch: 51, Batch(1000/1417) done. Loss: 8.67943192  lr:0.000001
+[ Tue Dec  2 08:06:18 2025 ] 	Epoch: 51, Batch(1200/1417) done. Loss: 12.93410683  lr:0.000001
+[ Tue Dec  2 08:07:16 2025 ] 	Epoch: 51, Batch(1400/1417) done. Loss: 7.65284061  lr:0.000001
+[ Tue Dec  2 08:07:20 2025 ] 	Mean training loss: 10.2125219279.
+[ Tue Dec  2 08:08:41 2025 ] Dev WER: 19.44% DEV del 06.87% DEV ins 02.49%
+[ Tue Dec  2 08:08:41 2025 ] Test WER: 19.96% Test del 06.73% Test ins 02.23%
+[ Tue Dec  2 08:08:41 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 08:08:41 2025 ] Epoch 51 costs 8 mins 13 seconds
+[ Tue Dec  2 08:08:41 2025 ] Training costs 9 hours 24 mins 22 seconds
+[ Tue Dec  2 08:08:47 2025 ] 	Epoch: 52, Batch(0/1417) done. Loss: 9.49028397  lr:0.000001
+[ Tue Dec  2 08:09:51 2025 ] 	Epoch: 52, Batch(200/1417) done. Loss: 6.99521303  lr:0.000001
+[ Tue Dec  2 08:10:46 2025 ] 	Epoch: 52, Batch(400/1417) done. Loss: 6.77623892  lr:0.000001
+[ Tue Dec  2 08:11:46 2025 ] 	Epoch: 52, Batch(600/1417) done. Loss: 10.34725761  lr:0.000001
+[ Tue Dec  2 08:12:38 2025 ] 	Epoch: 52, Batch(800/1417) done. Loss: 9.89461803  lr:0.000001
+[ Tue Dec  2 08:13:31 2025 ] 	Epoch: 52, Batch(1000/1417) done. Loss: 7.45716858  lr:0.000001
+[ Tue Dec  2 08:14:24 2025 ] 	Epoch: 52, Batch(1200/1417) done. Loss: 8.46205997  lr:0.000001
+[ Tue Dec  2 08:15:34 2025 ] 	Epoch: 52, Batch(1400/1417) done. Loss: 8.41912460  lr:0.000001
+[ Tue Dec  2 08:15:39 2025 ] 	Mean training loss: 10.2487642521.
+[ Tue Dec  2 08:16:44 2025 ] Dev WER: 19.17% DEV del 06.88% DEV ins 02.37%
+[ Tue Dec  2 08:16:44 2025 ] Test WER: 19.79% Test del 06.84% Test ins 02.26%
+[ Tue Dec  2 08:16:44 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 08:16:44 2025 ] Epoch 52 costs 8 mins 3 seconds
+[ Tue Dec  2 08:16:44 2025 ] Training costs 9 hours 32 mins 26 seconds
+[ Tue Dec  2 08:16:50 2025 ] 	Epoch: 53, Batch(0/1417) done. Loss: 13.59962463  lr:0.000001
+[ Tue Dec  2 08:17:46 2025 ] 	Epoch: 53, Batch(200/1417) done. Loss: 11.26347160  lr:0.000001
+[ Tue Dec  2 08:18:39 2025 ] 	Epoch: 53, Batch(400/1417) done. Loss: 7.50342035  lr:0.000001
+[ Tue Dec  2 08:19:38 2025 ] 	Epoch: 53, Batch(600/1417) done. Loss: 14.37986565  lr:0.000001
+[ Tue Dec  2 08:20:30 2025 ] 	Epoch: 53, Batch(800/1417) done. Loss: 8.88516617  lr:0.000001
+[ Tue Dec  2 08:21:23 2025 ] 	Epoch: 53, Batch(1000/1417) done. Loss: 7.76012468  lr:0.000001
+[ Tue Dec  2 08:22:19 2025 ] 	Epoch: 53, Batch(1200/1417) done. Loss: 9.41947174  lr:0.000001
+[ Tue Dec  2 08:23:10 2025 ] 	Epoch: 53, Batch(1400/1417) done. Loss: 10.96635246  lr:0.000001
+[ Tue Dec  2 08:23:15 2025 ] 	Mean training loss: 10.2121652278.
+[ Tue Dec  2 08:24:30 2025 ] Dev WER: 19.21% DEV del 06.99% DEV ins 02.38%
+[ Tue Dec  2 08:24:30 2025 ] Test WER: 19.73% Test del 06.62% Test ins 02.26%
+[ Tue Dec  2 08:24:30 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 08:24:30 2025 ] Epoch 53 costs 7 mins 46 seconds
+[ Tue Dec  2 08:24:30 2025 ] Training costs 9 hours 40 mins 12 seconds
+[ Tue Dec  2 08:24:37 2025 ] 	Epoch: 54, Batch(0/1417) done. Loss: 13.97452164  lr:0.000001
+[ Tue Dec  2 08:25:46 2025 ] 	Epoch: 54, Batch(200/1417) done. Loss: 11.91573715  lr:0.000001
+[ Tue Dec  2 08:26:40 2025 ] 	Epoch: 54, Batch(400/1417) done. Loss: 8.16127968  lr:0.000001
+[ Tue Dec  2 08:27:34 2025 ] 	Epoch: 54, Batch(600/1417) done. Loss: 8.70695019  lr:0.000001
+[ Tue Dec  2 08:29:26 2025 ] 	Epoch: 54, Batch(800/1417) done. Loss: 11.16524506  lr:0.000001
+[ Tue Dec  2 08:31:06 2025 ] 	Epoch: 54, Batch(1000/1417) done. Loss: 6.52099133  lr:0.000001
+[ Tue Dec  2 08:32:48 2025 ] 	Epoch: 54, Batch(1200/1417) done. Loss: 10.07827377  lr:0.000001
+[ Tue Dec  2 08:34:33 2025 ] 	Epoch: 54, Batch(1400/1417) done. Loss: 11.18466759  lr:0.000001
+[ Tue Dec  2 08:34:41 2025 ] 	Mean training loss: 10.1804351406.
+[ Tue Dec  2 08:36:21 2025 ] Dev WER: 19.26% DEV del 06.96% DEV ins 02.31%
+[ Tue Dec  2 08:36:21 2025 ] Test WER: 19.71% Test del 06.67% Test ins 02.22%
+[ Tue Dec  2 08:36:21 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 08:36:21 2025 ] Epoch 54 costs 11 mins 51 seconds
+[ Tue Dec  2 08:36:21 2025 ] Training costs 9 hours 52 mins 3 seconds
+[ Tue Dec  2 08:36:31 2025 ] 	Epoch: 55, Batch(0/1417) done. Loss: 11.79083252  lr:0.000001
+[ Tue Dec  2 08:38:16 2025 ] 	Epoch: 55, Batch(200/1417) done. Loss: 10.98507690  lr:0.000001
+[ Tue Dec  2 08:40:01 2025 ] 	Epoch: 55, Batch(400/1417) done. Loss: 8.91455841  lr:0.000001
+[ Tue Dec  2 08:41:41 2025 ] 	Epoch: 55, Batch(600/1417) done. Loss: 11.24005508  lr:0.000001
+[ Tue Dec  2 08:43:24 2025 ] 	Epoch: 55, Batch(800/1417) done. Loss: 11.25234032  lr:0.000001
+[ Tue Dec  2 08:45:09 2025 ] 	Epoch: 55, Batch(1000/1417) done. Loss: 9.26201630  lr:0.000001
+[ Tue Dec  2 08:46:46 2025 ] 	Epoch: 55, Batch(1200/1417) done. Loss: 10.48023987  lr:0.000001
+[ Tue Dec  2 08:48:30 2025 ] 	Epoch: 55, Batch(1400/1417) done. Loss: 10.46353626  lr:0.000001
+[ Tue Dec  2 08:48:35 2025 ] 	Mean training loss: 10.1927567127.
+[ Tue Dec  2 08:50:20 2025 ] Dev WER: 19.22% DEV del 07.21% DEV ins 02.26%
+[ Tue Dec  2 08:50:20 2025 ] Test WER: 19.74% Test del 06.88% Test ins 02.13%
+[ Tue Dec  2 08:50:20 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 08:50:20 2025 ] Epoch 55 costs 13 mins 58 seconds
+[ Tue Dec  2 08:50:20 2025 ] Training costs 10 hours 6 mins 2 seconds
+[ Tue Dec  2 08:50:28 2025 ] 	Epoch: 56, Batch(0/1417) done. Loss: 10.46431351  lr:0.000001
+[ Tue Dec  2 08:52:13 2025 ] 	Epoch: 56, Batch(200/1417) done. Loss: 9.45894909  lr:0.000001
+[ Tue Dec  2 08:53:55 2025 ] 	Epoch: 56, Batch(400/1417) done. Loss: 9.39143085  lr:0.000001
+[ Tue Dec  2 08:55:41 2025 ] 	Epoch: 56, Batch(600/1417) done. Loss: 9.35000992  lr:0.000001
+[ Tue Dec  2 08:57:18 2025 ] 	Epoch: 56, Batch(800/1417) done. Loss: 8.74308300  lr:0.000001
+[ Tue Dec  2 08:59:00 2025 ] 	Epoch: 56, Batch(1000/1417) done. Loss: 10.98220253  lr:0.000001
+[ Tue Dec  2 09:00:42 2025 ] 	Epoch: 56, Batch(1200/1417) done. Loss: 11.21999073  lr:0.000001
+[ Tue Dec  2 09:02:27 2025 ] 	Epoch: 56, Batch(1400/1417) done. Loss: 13.09256363  lr:0.000001
+[ Tue Dec  2 09:02:34 2025 ] 	Mean training loss: 10.1996980084.
+[ Tue Dec  2 09:04:19 2025 ] Dev WER: 19.26% DEV del 06.90% DEV ins 02.33%
+[ Tue Dec  2 09:04:19 2025 ] Test WER: 19.64% Test del 06.58% Test ins 02.16%
+[ Tue Dec  2 09:04:19 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 09:04:19 2025 ] Epoch 56 costs 13 mins 58 seconds
+[ Tue Dec  2 09:04:19 2025 ] Training costs 10 hours 20 mins 0 seconds
+[ Tue Dec  2 09:04:27 2025 ] 	Epoch: 57, Batch(0/1417) done. Loss: 12.13614559  lr:0.000001
+[ Tue Dec  2 09:06:11 2025 ] 	Epoch: 57, Batch(200/1417) done. Loss: 10.84659386  lr:0.000001
+[ Tue Dec  2 09:07:56 2025 ] 	Epoch: 57, Batch(400/1417) done. Loss: 11.13204956  lr:0.000001
+[ Tue Dec  2 09:09:39 2025 ] 	Epoch: 57, Batch(600/1417) done. Loss: 12.78338909  lr:0.000001
+[ Tue Dec  2 09:11:20 2025 ] 	Epoch: 57, Batch(800/1417) done. Loss: 10.07698059  lr:0.000001
+[ Tue Dec  2 09:12:30 2025 ] 	Epoch: 57, Batch(1000/1417) done. Loss: 8.39661407  lr:0.000001
+[ Tue Dec  2 09:13:26 2025 ] 	Epoch: 57, Batch(1200/1417) done. Loss: 9.45814323  lr:0.000001
+[ Tue Dec  2 09:14:32 2025 ] 	Epoch: 57, Batch(1400/1417) done. Loss: 9.02361870  lr:0.000001
+[ Tue Dec  2 09:14:37 2025 ] 	Mean training loss: 10.1416084903.
+[ Tue Dec  2 09:15:57 2025 ] Dev WER: 19.35% DEV del 07.14% DEV ins 02.26%
+[ Tue Dec  2 09:15:57 2025 ] Test WER: 19.67% Test del 06.84% Test ins 02.08%
+[ Tue Dec  2 09:15:57 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 09:15:57 2025 ] Epoch 57 costs 11 mins 38 seconds
+[ Tue Dec  2 09:15:57 2025 ] Training costs 10 hours 31 mins 39 seconds
+[ Tue Dec  2 09:16:05 2025 ] 	Epoch: 58, Batch(0/1417) done. Loss: 11.37783718  lr:0.000001
+[ Tue Dec  2 09:17:10 2025 ] 	Epoch: 58, Batch(200/1417) done. Loss: 8.27191162  lr:0.000001
+[ Tue Dec  2 09:18:06 2025 ] 	Epoch: 58, Batch(400/1417) done. Loss: 6.11668444  lr:0.000001
+[ Tue Dec  2 09:19:00 2025 ] 	Epoch: 58, Batch(600/1417) done. Loss: 14.99569511  lr:0.000001
+[ Tue Dec  2 09:20:06 2025 ] 	Epoch: 58, Batch(800/1417) done. Loss: 16.16312981  lr:0.000001
+[ Tue Dec  2 09:20:58 2025 ] 	Epoch: 58, Batch(1000/1417) done. Loss: 11.98029518  lr:0.000001
+[ Tue Dec  2 09:21:51 2025 ] 	Epoch: 58, Batch(1200/1417) done. Loss: 10.38413525  lr:0.000001
+[ Tue Dec  2 09:22:43 2025 ] 	Epoch: 58, Batch(1400/1417) done. Loss: 12.56547356  lr:0.000001
+[ Tue Dec  2 09:22:47 2025 ] 	Mean training loss: 10.1747797160.
+[ Tue Dec  2 09:24:05 2025 ] Dev WER: 19.31% DEV del 07.08% DEV ins 02.28%
+[ Tue Dec  2 09:24:05 2025 ] Test WER: 19.74% Test del 06.82% Test ins 02.13%
+[ Tue Dec  2 09:24:05 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 09:24:05 2025 ] Epoch 58 costs 8 mins 7 seconds
+[ Tue Dec  2 09:24:05 2025 ] Training costs 10 hours 39 mins 47 seconds
+[ Tue Dec  2 09:24:11 2025 ] 	Epoch: 59, Batch(0/1417) done. Loss: 11.29796410  lr:0.000001
+[ Tue Dec  2 09:25:10 2025 ] 	Epoch: 59, Batch(200/1417) done. Loss: 6.75525570  lr:0.000001
+[ Tue Dec  2 09:26:17 2025 ] 	Epoch: 59, Batch(400/1417) done. Loss: 9.41275215  lr:0.000001
+[ Tue Dec  2 09:27:10 2025 ] 	Epoch: 59, Batch(600/1417) done. Loss: 8.26109123  lr:0.000001
+[ Tue Dec  2 09:28:02 2025 ] 	Epoch: 59, Batch(800/1417) done. Loss: 7.73000860  lr:0.000001
+[ Tue Dec  2 09:28:55 2025 ] 	Epoch: 59, Batch(1000/1417) done. Loss: 11.17225266  lr:0.000001
+[ Tue Dec  2 09:30:13 2025 ] 	Epoch: 59, Batch(1200/1417) done. Loss: 10.07960320  lr:0.000001
+[ Tue Dec  2 09:31:58 2025 ] 	Epoch: 59, Batch(1400/1417) done. Loss: 8.29049969  lr:0.000001
+[ Tue Dec  2 09:32:06 2025 ] 	Mean training loss: 10.1137982118.
+[ Tue Dec  2 09:33:39 2025 ] Dev WER: 19.06% DEV del 06.85% DEV ins 02.26%
+[ Tue Dec  2 09:33:39 2025 ] Test WER: 19.74% Test del 06.68% Test ins 02.37%
+[ Tue Dec  2 09:33:39 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 09:33:39 2025 ] Epoch 59 costs 9 mins 33 seconds
+[ Tue Dec  2 09:33:39 2025 ] Training costs 10 hours 49 mins 21 seconds
+[ Tue Dec  2 09:33:49 2025 ] 	Epoch: 60, Batch(0/1417) done. Loss: 8.59354305  lr:0.000001
+[ Tue Dec  2 09:35:25 2025 ] 	Epoch: 60, Batch(200/1417) done. Loss: 7.71276379  lr:0.000001
+[ Tue Dec  2 09:37:10 2025 ] 	Epoch: 60, Batch(400/1417) done. Loss: 10.04932022  lr:0.000001
+[ Tue Dec  2 09:38:54 2025 ] 	Epoch: 60, Batch(600/1417) done. Loss: 10.79492092  lr:0.000001
+[ Tue Dec  2 09:40:35 2025 ] 	Epoch: 60, Batch(800/1417) done. Loss: 13.55034161  lr:0.000001
+[ Tue Dec  2 09:42:15 2025 ] 	Epoch: 60, Batch(1000/1417) done. Loss: 8.39638138  lr:0.000001
+[ Tue Dec  2 09:43:55 2025 ] 	Epoch: 60, Batch(1200/1417) done. Loss: 11.09306240  lr:0.000001
+[ Tue Dec  2 09:45:40 2025 ] 	Epoch: 60, Batch(1400/1417) done. Loss: 11.81583691  lr:0.000001
+[ Tue Dec  2 09:45:49 2025 ] 	Mean training loss: 10.0943958310.
+[ Tue Dec  2 09:47:20 2025 ] Dev WER: 19.26% DEV del 06.81% DEV ins 02.37%
+[ Tue Dec  2 09:47:20 2025 ] Test WER: 19.88% Test del 06.68% Test ins 02.25%
+[ Tue Dec  2 09:47:20 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 09:47:20 2025 ] Epoch 60 costs 13 mins 41 seconds
+[ Tue Dec  2 09:47:20 2025 ] Training costs 11 hours 3 mins 2 seconds
+[ Tue Dec  2 09:47:23 2025 ] 	Epoch: 61, Batch(0/1417) done. Loss: 9.66594028  lr:0.000001
+[ Tue Dec  2 09:49:10 2025 ] 	Epoch: 61, Batch(200/1417) done. Loss: 12.01435280  lr:0.000001
+[ Tue Dec  2 09:50:50 2025 ] 	Epoch: 61, Batch(400/1417) done. Loss: 10.52050018  lr:0.000001
+[ Tue Dec  2 09:52:36 2025 ] 	Epoch: 61, Batch(600/1417) done. Loss: 7.35578060  lr:0.000001
+[ Tue Dec  2 09:54:18 2025 ] 	Epoch: 61, Batch(800/1417) done. Loss: 13.76733589  lr:0.000001
+[ Tue Dec  2 09:56:01 2025 ] 	Epoch: 61, Batch(1000/1417) done. Loss: 8.94776726  lr:0.000001
+[ Tue Dec  2 09:57:44 2025 ] 	Epoch: 61, Batch(1200/1417) done. Loss: 8.82320786  lr:0.000001
+[ Tue Dec  2 09:59:29 2025 ] 	Epoch: 61, Batch(1400/1417) done. Loss: 11.16424370  lr:0.000001
+[ Tue Dec  2 09:59:36 2025 ] 	Mean training loss: 10.1121778939.
+[ Tue Dec  2 10:01:19 2025 ] Dev WER: 19.24% DEV del 06.61% DEV ins 02.42%
+[ Tue Dec  2 10:01:19 2025 ] Test WER: 19.68% Test del 06.41% Test ins 02.37%
+[ Tue Dec  2 10:01:19 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 10:01:19 2025 ] Epoch 61 costs 13 mins 59 seconds
+[ Tue Dec  2 10:01:19 2025 ] Training costs 11 hours 17 mins 1 seconds
+[ Tue Dec  2 10:01:27 2025 ] 	Epoch: 62, Batch(0/1417) done. Loss: 9.18591118  lr:0.000001
+[ Tue Dec  2 10:03:11 2025 ] 	Epoch: 62, Batch(200/1417) done. Loss: 17.27949142  lr:0.000001
+[ Tue Dec  2 10:04:54 2025 ] 	Epoch: 62, Batch(400/1417) done. Loss: 7.59568596  lr:0.000001
+[ Tue Dec  2 10:06:34 2025 ] 	Epoch: 62, Batch(600/1417) done. Loss: 8.66617203  lr:0.000001
+[ Tue Dec  2 10:08:17 2025 ] 	Epoch: 62, Batch(800/1417) done. Loss: 11.28019142  lr:0.000001
+[ Tue Dec  2 10:09:58 2025 ] 	Epoch: 62, Batch(1000/1417) done. Loss: 9.18211079  lr:0.000001
+[ Tue Dec  2 10:11:41 2025 ] 	Epoch: 62, Batch(1200/1417) done. Loss: 12.89185238  lr:0.000001
+[ Tue Dec  2 10:13:22 2025 ] 	Epoch: 62, Batch(1400/1417) done. Loss: 12.66036224  lr:0.000001
+[ Tue Dec  2 10:13:26 2025 ] 	Mean training loss: 10.0946871610.
+[ Tue Dec  2 10:14:44 2025 ] Dev WER: 19.35% DEV del 06.83% DEV ins 02.35%
+[ Tue Dec  2 10:14:44 2025 ] Test WER: 19.71% Test del 06.73% Test ins 02.16%
+[ Tue Dec  2 10:14:44 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 10:14:44 2025 ] Epoch 62 costs 13 mins 24 seconds
+[ Tue Dec  2 10:14:44 2025 ] Training costs 11 hours 30 mins 26 seconds
+[ Tue Dec  2 10:14:49 2025 ] 	Epoch: 63, Batch(0/1417) done. Loss: 19.14500427  lr:0.000001
+[ Tue Dec  2 10:15:55 2025 ] 	Epoch: 63, Batch(200/1417) done. Loss: 12.16114330  lr:0.000001
+[ Tue Dec  2 10:16:55 2025 ] 	Epoch: 63, Batch(400/1417) done. Loss: 10.76415348  lr:0.000001
+[ Tue Dec  2 10:17:49 2025 ] 	Epoch: 63, Batch(600/1417) done. Loss: 8.55052567  lr:0.000001
+[ Tue Dec  2 10:18:41 2025 ] 	Epoch: 63, Batch(800/1417) done. Loss: 8.05127907  lr:0.000001
+[ Tue Dec  2 10:19:56 2025 ] 	Epoch: 63, Batch(1000/1417) done. Loss: 8.00132561  lr:0.000001
+[ Tue Dec  2 10:20:52 2025 ] 	Epoch: 63, Batch(1200/1417) done. Loss: 10.65603542  lr:0.000001
+[ Tue Dec  2 10:21:48 2025 ] 	Epoch: 63, Batch(1400/1417) done. Loss: 7.23880959  lr:0.000001
+[ Tue Dec  2 10:21:53 2025 ] 	Mean training loss: 10.0748134514.
+[ Tue Dec  2 10:23:16 2025 ] Dev WER: 19.28% DEV del 06.94% DEV ins 02.35%
+[ Tue Dec  2 10:23:16 2025 ] Test WER: 19.96% Test del 06.82% Test ins 02.23%
+[ Tue Dec  2 10:23:16 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 10:23:16 2025 ] Epoch 63 costs 8 mins 31 seconds
+[ Tue Dec  2 10:23:16 2025 ] Training costs 11 hours 38 mins 58 seconds
+[ Tue Dec  2 10:23:23 2025 ] 	Epoch: 64, Batch(0/1417) done. Loss: 22.26097107  lr:0.000001
+[ Tue Dec  2 10:24:17 2025 ] 	Epoch: 64, Batch(200/1417) done. Loss: 8.91560745  lr:0.000001
+[ Tue Dec  2 10:25:09 2025 ] 	Epoch: 64, Batch(400/1417) done. Loss: 12.15033913  lr:0.000001
+[ Tue Dec  2 10:26:05 2025 ] 	Epoch: 64, Batch(600/1417) done. Loss: 12.08517838  lr:0.000001
+[ Tue Dec  2 10:27:06 2025 ] 	Epoch: 64, Batch(800/1417) done. Loss: 6.79362726  lr:0.000001
+[ Tue Dec  2 10:28:07 2025 ] 	Epoch: 64, Batch(1000/1417) done. Loss: 12.04627132  lr:0.000001
+[ Tue Dec  2 10:29:05 2025 ] 	Epoch: 64, Batch(1200/1417) done. Loss: 6.32159996  lr:0.000001
+[ Tue Dec  2 10:30:07 2025 ] 	Epoch: 64, Batch(1400/1417) done. Loss: 8.73792458  lr:0.000001
+[ Tue Dec  2 10:30:11 2025 ] 	Mean training loss: 10.1187992793.
+[ Tue Dec  2 10:32:01 2025 ] Dev WER: 19.28% DEV del 07.26% DEV ins 02.24%
+[ Tue Dec  2 10:32:01 2025 ] Test WER: 19.85% Test del 06.85% Test ins 02.08%
+[ Tue Dec  2 10:32:01 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 10:32:01 2025 ] Epoch 64 costs 8 mins 44 seconds
+[ Tue Dec  2 10:32:01 2025 ] Training costs 11 hours 47 mins 42 seconds
+[ Tue Dec  2 10:32:08 2025 ] 	Epoch: 65, Batch(0/1417) done. Loss: 12.95130825  lr:0.000001
+[ Tue Dec  2 10:33:58 2025 ] 	Epoch: 65, Batch(200/1417) done. Loss: 9.97076607  lr:0.000001
+[ Tue Dec  2 10:35:41 2025 ] 	Epoch: 65, Batch(400/1417) done. Loss: 8.09892654  lr:0.000001
+[ Tue Dec  2 10:37:23 2025 ] 	Epoch: 65, Batch(600/1417) done. Loss: 7.39807653  lr:0.000001
+[ Tue Dec  2 10:39:05 2025 ] 	Epoch: 65, Batch(800/1417) done. Loss: 7.74379683  lr:0.000001
+[ Tue Dec  2 10:40:48 2025 ] 	Epoch: 65, Batch(1000/1417) done. Loss: 10.89731789  lr:0.000001
+[ Tue Dec  2 10:42:30 2025 ] 	Epoch: 65, Batch(1200/1417) done. Loss: 9.60337734  lr:0.000001
+[ Tue Dec  2 10:44:13 2025 ] 	Epoch: 65, Batch(1400/1417) done. Loss: 7.88585949  lr:0.000001
+[ Tue Dec  2 10:44:22 2025 ] 	Mean training loss: 10.0246777925.
+[ Tue Dec  2 10:46:02 2025 ] Dev WER: 19.21% DEV del 06.83% DEV ins 02.33%
+[ Tue Dec  2 10:46:02 2025 ] Test WER: 19.79% Test del 06.78% Test ins 02.17%
+[ Tue Dec  2 10:46:02 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 10:46:02 2025 ] Epoch 65 costs 14 mins 1 seconds
+[ Tue Dec  2 10:46:02 2025 ] Training costs 12 hours 1 mins 44 seconds
+[ Tue Dec  2 10:46:06 2025 ] 	Epoch: 66, Batch(0/1417) done. Loss: 9.29996395  lr:0.000001
+[ Tue Dec  2 10:47:56 2025 ] 	Epoch: 66, Batch(200/1417) done. Loss: 8.44479561  lr:0.000001
+[ Tue Dec  2 10:49:39 2025 ] 	Epoch: 66, Batch(400/1417) done. Loss: 9.15575123  lr:0.000001
+[ Tue Dec  2 10:51:14 2025 ] 	Epoch: 66, Batch(600/1417) done. Loss: 8.30291176  lr:0.000001
+[ Tue Dec  2 10:52:58 2025 ] 	Epoch: 66, Batch(800/1417) done. Loss: 9.56747055  lr:0.000001
+[ Tue Dec  2 10:54:42 2025 ] 	Epoch: 66, Batch(1000/1417) done. Loss: 6.19655085  lr:0.000001
+[ Tue Dec  2 10:56:25 2025 ] 	Epoch: 66, Batch(1200/1417) done. Loss: 7.32640648  lr:0.000001
+[ Tue Dec  2 10:58:11 2025 ] 	Epoch: 66, Batch(1400/1417) done. Loss: 10.09262657  lr:0.000001
+[ Tue Dec  2 10:58:19 2025 ] 	Mean training loss: 10.1082977300.
+[ Tue Dec  2 10:59:53 2025 ] Dev WER: 19.24% DEV del 07.03% DEV ins 02.28%
+[ Tue Dec  2 10:59:53 2025 ] Test WER: 19.82% Test del 06.81% Test ins 02.20%
+[ Tue Dec  2 10:59:53 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 10:59:53 2025 ] Epoch 66 costs 13 mins 50 seconds
+[ Tue Dec  2 10:59:53 2025 ] Training costs 12 hours 15 mins 34 seconds
+[ Tue Dec  2 11:00:03 2025 ] 	Epoch: 67, Batch(0/1417) done. Loss: 8.02641869  lr:0.000001
+[ Tue Dec  2 11:01:48 2025 ] 	Epoch: 67, Batch(200/1417) done. Loss: 9.10013580  lr:0.000001
+[ Tue Dec  2 11:03:27 2025 ] 	Epoch: 67, Batch(400/1417) done. Loss: 8.64658928  lr:0.000001
+[ Tue Dec  2 11:05:08 2025 ] 	Epoch: 67, Batch(600/1417) done. Loss: 8.39180470  lr:0.000001
+[ Tue Dec  2 11:06:48 2025 ] 	Epoch: 67, Batch(800/1417) done. Loss: 13.18819046  lr:0.000001
+[ Tue Dec  2 11:08:32 2025 ] 	Epoch: 67, Batch(1000/1417) done. Loss: 7.81627893  lr:0.000001
+[ Tue Dec  2 11:10:14 2025 ] 	Epoch: 67, Batch(1200/1417) done. Loss: 15.36301613  lr:0.000001
+[ Tue Dec  2 11:11:59 2025 ] 	Epoch: 67, Batch(1400/1417) done. Loss: 12.52350807  lr:0.000001
+[ Tue Dec  2 11:12:07 2025 ] 	Mean training loss: 10.0897128523.
+[ Tue Dec  2 11:13:39 2025 ] Dev WER: 19.22% DEV del 06.96% DEV ins 02.28%
+[ Tue Dec  2 11:13:39 2025 ] Test WER: 19.76% Test del 06.84% Test ins 02.09%
+[ Tue Dec  2 11:13:39 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 11:13:39 2025 ] Epoch 67 costs 13 mins 45 seconds
+[ Tue Dec  2 11:13:39 2025 ] Training costs 12 hours 29 mins 20 seconds
+[ Tue Dec  2 11:13:42 2025 ] 	Epoch: 68, Batch(0/1417) done. Loss: 8.45705223  lr:0.000001
+[ Tue Dec  2 11:15:24 2025 ] 	Epoch: 68, Batch(200/1417) done. Loss: 8.57278633  lr:0.000001
+[ Tue Dec  2 11:16:21 2025 ] 	Epoch: 68, Batch(400/1417) done. Loss: 7.72993374  lr:0.000001
+[ Tue Dec  2 11:17:16 2025 ] 	Epoch: 68, Batch(600/1417) done. Loss: 10.78510475  lr:0.000001
+[ Tue Dec  2 11:18:18 2025 ] 	Epoch: 68, Batch(800/1417) done. Loss: 11.46395874  lr:0.000001
+[ Tue Dec  2 11:19:15 2025 ] 	Epoch: 68, Batch(1000/1417) done. Loss: 9.75475883  lr:0.000001
+[ Tue Dec  2 11:20:09 2025 ] 	Epoch: 68, Batch(1200/1417) done. Loss: 6.97793245  lr:0.000001
+[ Tue Dec  2 11:21:03 2025 ] 	Epoch: 68, Batch(1400/1417) done. Loss: 8.84062099  lr:0.000001
+[ Tue Dec  2 11:21:19 2025 ] 	Mean training loss: 10.0584238785.
+[ Tue Dec  2 11:22:38 2025 ] Dev WER: 19.48% DEV del 07.12% DEV ins 02.31%
+[ Tue Dec  2 11:22:38 2025 ] Test WER: 19.94% Test del 06.92% Test ins 02.16%
+[ Tue Dec  2 11:22:38 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 11:22:38 2025 ] Epoch 68 costs 8 mins 59 seconds
+[ Tue Dec  2 11:22:38 2025 ] Training costs 12 hours 38 mins 19 seconds
+[ Tue Dec  2 11:22:43 2025 ] 	Epoch: 69, Batch(0/1417) done. Loss: 11.15585709  lr:0.000001
+[ Tue Dec  2 11:23:38 2025 ] 	Epoch: 69, Batch(200/1417) done. Loss: 10.91200733  lr:0.000001
+[ Tue Dec  2 11:24:35 2025 ] 	Epoch: 69, Batch(400/1417) done. Loss: 10.34763050  lr:0.000001
+[ Tue Dec  2 11:25:27 2025 ] 	Epoch: 69, Batch(600/1417) done. Loss: 9.48575401  lr:0.000001
+[ Tue Dec  2 11:26:22 2025 ] 	Epoch: 69, Batch(800/1417) done. Loss: 11.63304138  lr:0.000001
+[ Tue Dec  2 11:27:20 2025 ] 	Epoch: 69, Batch(1000/1417) done. Loss: 6.84017563  lr:0.000001
+[ Tue Dec  2 11:28:13 2025 ] 	Epoch: 69, Batch(1200/1417) done. Loss: 6.83276939  lr:0.000001
+[ Tue Dec  2 11:29:09 2025 ] 	Epoch: 69, Batch(1400/1417) done. Loss: 14.43688393  lr:0.000001
+[ Tue Dec  2 11:29:13 2025 ] 	Mean training loss: 10.0828924132.
+[ Tue Dec  2 11:30:36 2025 ] Dev WER: 19.37% DEV del 06.87% DEV ins 02.37%
+[ Tue Dec  2 11:30:36 2025 ] Test WER: 19.79% Test del 06.75% Test ins 02.19%
+[ Tue Dec  2 11:30:36 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 11:30:36 2025 ] Epoch 69 costs 7 mins 57 seconds
+[ Tue Dec  2 11:30:36 2025 ] Training costs 12 hours 46 mins 17 seconds
+[ Tue Dec  2 11:30:43 2025 ] 	Epoch: 70, Batch(0/1417) done. Loss: 10.10910225  lr:0.000001
+[ Tue Dec  2 11:31:36 2025 ] 	Epoch: 70, Batch(200/1417) done. Loss: 12.31079674  lr:0.000001
+[ Tue Dec  2 11:32:37 2025 ] 	Epoch: 70, Batch(400/1417) done. Loss: 6.85896254  lr:0.000001
+[ Tue Dec  2 11:34:22 2025 ] 	Epoch: 70, Batch(600/1417) done. Loss: 12.65860176  lr:0.000001
+[ Tue Dec  2 11:36:07 2025 ] 	Epoch: 70, Batch(800/1417) done. Loss: 11.17671108  lr:0.000001
+[ Tue Dec  2 11:37:49 2025 ] 	Epoch: 70, Batch(1000/1417) done. Loss: 8.75123978  lr:0.000001
+[ Tue Dec  2 11:39:29 2025 ] 	Epoch: 70, Batch(1200/1417) done. Loss: 6.12889099  lr:0.000001
+[ Tue Dec  2 11:41:10 2025 ] 	Epoch: 70, Batch(1400/1417) done. Loss: 7.18313980  lr:0.000001
+[ Tue Dec  2 11:41:19 2025 ] 	Mean training loss: 10.0760778095.
+[ Tue Dec  2 11:43:05 2025 ] Dev WER: 19.24% DEV del 07.24% DEV ins 02.24%
+[ Tue Dec  2 11:43:05 2025 ] Test WER: 19.93% Test del 07.18% Test ins 02.14%
+[ Tue Dec  2 11:43:05 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 11:43:06 2025 ] Epoch 70 costs 12 mins 29 seconds
+[ Tue Dec  2 11:43:06 2025 ] Training costs 12 hours 58 mins 47 seconds
+[ Tue Dec  2 11:43:14 2025 ] 	Epoch: 71, Batch(0/1417) done. Loss: 16.81858635  lr:0.000001
+[ Tue Dec  2 11:44:57 2025 ] 	Epoch: 71, Batch(200/1417) done. Loss: 7.48339796  lr:0.000001
+[ Tue Dec  2 11:46:39 2025 ] 	Epoch: 71, Batch(400/1417) done. Loss: 10.37099457  lr:0.000001
+[ Tue Dec  2 11:48:21 2025 ] 	Epoch: 71, Batch(600/1417) done. Loss: 11.54769421  lr:0.000001
+[ Tue Dec  2 11:50:05 2025 ] 	Epoch: 71, Batch(800/1417) done. Loss: 9.94151783  lr:0.000001
+[ Tue Dec  2 11:51:47 2025 ] 	Epoch: 71, Batch(1000/1417) done. Loss: 10.96724892  lr:0.000001
+[ Tue Dec  2 11:53:29 2025 ] 	Epoch: 71, Batch(1200/1417) done. Loss: 6.49167824  lr:0.000001
+[ Tue Dec  2 11:55:11 2025 ] 	Epoch: 71, Batch(1400/1417) done. Loss: 8.79510021  lr:0.000001
+[ Tue Dec  2 11:55:20 2025 ] 	Mean training loss: 10.0340341236.
+[ Tue Dec  2 11:57:54 2025 ] Dev WER: 19.22% DEV del 06.72% DEV ins 02.35%
+[ Tue Dec  2 11:57:54 2025 ] Test WER: 19.71% Test del 06.44% Test ins 02.26%
+[ Tue Dec  2 11:57:54 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 11:57:54 2025 ] Epoch 71 costs 14 mins 48 seconds
+[ Tue Dec  2 11:57:54 2025 ] Training costs 13 hours 13 mins 35 seconds
+[ Tue Dec  2 11:58:09 2025 ] 	Epoch: 72, Batch(0/1417) done. Loss: 10.58596611  lr:0.000001
+[ Tue Dec  2 11:59:51 2025 ] 	Epoch: 72, Batch(200/1417) done. Loss: 10.40609264  lr:0.000001
+[ Tue Dec  2 12:01:32 2025 ] 	Epoch: 72, Batch(400/1417) done. Loss: 8.05189323  lr:0.000001
+[ Tue Dec  2 12:03:11 2025 ] 	Epoch: 72, Batch(600/1417) done. Loss: 10.00989342  lr:0.000001
+[ Tue Dec  2 12:04:48 2025 ] 	Epoch: 72, Batch(800/1417) done. Loss: 8.61390877  lr:0.000001
+[ Tue Dec  2 12:06:42 2025 ] 	Epoch: 72, Batch(1000/1417) done. Loss: 9.75863647  lr:0.000001
+[ Tue Dec  2 12:08:26 2025 ] 	Epoch: 72, Batch(1200/1417) done. Loss: 9.36017799  lr:0.000001
+[ Tue Dec  2 12:10:09 2025 ] 	Epoch: 72, Batch(1400/1417) done. Loss: 12.08755493  lr:0.000001
+[ Tue Dec  2 12:10:18 2025 ] 	Mean training loss: 10.1047810987.
+[ Tue Dec  2 12:12:56 2025 ] Dev WER: 19.35% DEV del 06.70% DEV ins 02.46%
+[ Tue Dec  2 12:12:56 2025 ] Test WER: 19.82% Test del 06.51% Test ins 02.29%
+[ Tue Dec  2 12:12:56 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 12:13:01 2025 ] Epoch 72 costs 15 mins 2 seconds
+[ Tue Dec  2 12:13:01 2025 ] Training costs 13 hours 28 mins 38 seconds
+[ Tue Dec  2 12:13:31 2025 ] 	Epoch: 73, Batch(0/1417) done. Loss: 9.28740311  lr:0.000001
+[ Tue Dec  2 12:14:49 2025 ] 	Epoch: 73, Batch(200/1417) done. Loss: 9.88648224  lr:0.000001
+[ Tue Dec  2 12:15:53 2025 ] 	Epoch: 73, Batch(400/1417) done. Loss: 11.21146202  lr:0.000001
+[ Tue Dec  2 12:16:50 2025 ] 	Epoch: 73, Batch(600/1417) done. Loss: 10.21603203  lr:0.000001
+[ Tue Dec  2 12:17:50 2025 ] 	Epoch: 73, Batch(800/1417) done. Loss: 8.53415775  lr:0.000001
+[ Tue Dec  2 12:18:55 2025 ] 	Epoch: 73, Batch(1000/1417) done. Loss: 9.14902496  lr:0.000001
+[ Tue Dec  2 12:20:04 2025 ] 	Epoch: 73, Batch(1200/1417) done. Loss: 9.53562737  lr:0.000001
+[ Tue Dec  2 12:21:06 2025 ] 	Epoch: 73, Batch(1400/1417) done. Loss: 10.75976372  lr:0.000001
+[ Tue Dec  2 12:21:20 2025 ] 	Mean training loss: 10.0485441175.
+[ Tue Dec  2 12:22:51 2025 ] Dev WER: 19.28% DEV del 06.97% DEV ins 02.24%
+[ Tue Dec  2 12:22:51 2025 ] Test WER: 19.67% Test del 06.81% Test ins 02.11%
+[ Tue Dec  2 12:22:51 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 12:22:51 2025 ] Epoch 73 costs 9 mins 49 seconds
+[ Tue Dec  2 12:22:51 2025 ] Training costs 13 hours 38 mins 27 seconds
+[ Tue Dec  2 12:22:55 2025 ] 	Epoch: 74, Batch(0/1417) done. Loss: 9.50417805  lr:0.000001
+[ Tue Dec  2 12:24:09 2025 ] 	Epoch: 74, Batch(200/1417) done. Loss: 10.76450634  lr:0.000001
+[ Tue Dec  2 12:25:28 2025 ] 	Epoch: 74, Batch(400/1417) done. Loss: 8.85378647  lr:0.000001
+[ Tue Dec  2 12:26:39 2025 ] 	Epoch: 74, Batch(600/1417) done. Loss: 9.63354301  lr:0.000001
+[ Tue Dec  2 12:27:48 2025 ] 	Epoch: 74, Batch(800/1417) done. Loss: 12.34889793  lr:0.000001
+[ Tue Dec  2 12:28:48 2025 ] 	Epoch: 74, Batch(1000/1417) done. Loss: 6.86062050  lr:0.000001
+[ Tue Dec  2 12:29:40 2025 ] 	Epoch: 74, Batch(1200/1417) done. Loss: 15.03784370  lr:0.000001
+[ Tue Dec  2 12:30:37 2025 ] 	Epoch: 74, Batch(1400/1417) done. Loss: 13.25207520  lr:0.000001
+[ Tue Dec  2 12:30:41 2025 ] 	Mean training loss: 9.9936049040.
+[ Tue Dec  2 12:32:03 2025 ] Dev WER: 19.49% DEV del 07.01% DEV ins 02.31%
+[ Tue Dec  2 12:32:03 2025 ] Test WER: 19.81% Test del 06.88% Test ins 02.13%
+[ Tue Dec  2 12:32:03 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 12:32:03 2025 ] Epoch 74 costs 9 mins 12 seconds
+[ Tue Dec  2 12:32:03 2025 ] Training costs 13 hours 47 mins 39 seconds
+[ Tue Dec  2 12:32:06 2025 ] 	Epoch: 75, Batch(0/1417) done. Loss: 9.96893692  lr:0.000001
+[ Tue Dec  2 12:33:06 2025 ] 	Epoch: 75, Batch(200/1417) done. Loss: 7.80221939  lr:0.000001
+[ Tue Dec  2 12:33:59 2025 ] 	Epoch: 75, Batch(400/1417) done. Loss: 11.65476608  lr:0.000001
+[ Tue Dec  2 12:34:52 2025 ] 	Epoch: 75, Batch(600/1417) done. Loss: 7.34750938  lr:0.000001
+[ Tue Dec  2 12:36:00 2025 ] 	Epoch: 75, Batch(800/1417) done. Loss: 11.14312363  lr:0.000001
+[ Tue Dec  2 12:36:53 2025 ] 	Epoch: 75, Batch(1000/1417) done. Loss: 8.35424614  lr:0.000001
+[ Tue Dec  2 12:37:58 2025 ] 	Epoch: 75, Batch(1200/1417) done. Loss: 14.67941761  lr:0.000001
+[ Tue Dec  2 12:38:52 2025 ] 	Epoch: 75, Batch(1400/1417) done. Loss: 11.34186554  lr:0.000001
+[ Tue Dec  2 12:38:56 2025 ] 	Mean training loss: 9.9678702395.
+[ Tue Dec  2 12:40:10 2025 ] Dev WER: 19.39% DEV del 06.90% DEV ins 02.40%
+[ Tue Dec  2 12:40:10 2025 ] Test WER: 19.85% Test del 06.71% Test ins 02.19%
+[ Tue Dec  2 12:40:10 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 12:40:10 2025 ] Epoch 75 costs 8 mins 7 seconds
+[ Tue Dec  2 12:40:10 2025 ] Training costs 13 hours 55 mins 47 seconds
+[ Tue Dec  2 12:40:16 2025 ] 	Epoch: 76, Batch(0/1417) done. Loss: 11.08085632  lr:0.000001
+[ Tue Dec  2 12:41:26 2025 ] 	Epoch: 76, Batch(200/1417) done. Loss: 6.28606606  lr:0.000001
+[ Tue Dec  2 12:42:18 2025 ] 	Epoch: 76, Batch(400/1417) done. Loss: 8.88316059  lr:0.000001
+[ Tue Dec  2 12:43:18 2025 ] 	Epoch: 76, Batch(600/1417) done. Loss: 12.65771103  lr:0.000001
+[ Tue Dec  2 12:44:33 2025 ] 	Epoch: 76, Batch(800/1417) done. Loss: 11.09886551  lr:0.000001
+[ Tue Dec  2 12:45:27 2025 ] 	Epoch: 76, Batch(1000/1417) done. Loss: 8.60493183  lr:0.000001
+[ Tue Dec  2 12:46:43 2025 ] 	Epoch: 76, Batch(1200/1417) done. Loss: 11.74217796  lr:0.000001
+[ Tue Dec  2 12:48:22 2025 ] 	Epoch: 76, Batch(1400/1417) done. Loss: 8.69453430  lr:0.000001
+[ Tue Dec  2 12:48:34 2025 ] 	Mean training loss: 10.0707703374.
+[ Tue Dec  2 12:49:55 2025 ] Dev WER: 19.35% DEV del 06.99% DEV ins 02.42%
+[ Tue Dec  2 12:49:55 2025 ] Test WER: 19.78% Test del 06.88% Test ins 02.16%
+[ Tue Dec  2 12:49:55 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 12:49:55 2025 ] Epoch 76 costs 9 mins 44 seconds
+[ Tue Dec  2 12:49:55 2025 ] Training costs 14 hours 5 mins 31 seconds
+[ Tue Dec  2 12:49:59 2025 ] 	Epoch: 77, Batch(0/1417) done. Loss: 15.87242794  lr:0.000001
+[ Tue Dec  2 12:51:09 2025 ] 	Epoch: 77, Batch(200/1417) done. Loss: 12.20047569  lr:0.000001
+[ Tue Dec  2 12:52:02 2025 ] 	Epoch: 77, Batch(400/1417) done. Loss: 8.92433357  lr:0.000001
+[ Tue Dec  2 12:53:06 2025 ] 	Epoch: 77, Batch(600/1417) done. Loss: 12.06826973  lr:0.000001
+[ Tue Dec  2 12:53:59 2025 ] 	Epoch: 77, Batch(800/1417) done. Loss: 11.67840290  lr:0.000001
+[ Tue Dec  2 12:55:08 2025 ] 	Epoch: 77, Batch(1000/1417) done. Loss: 11.81040573  lr:0.000001
+[ Tue Dec  2 12:56:17 2025 ] 	Epoch: 77, Batch(1200/1417) done. Loss: 10.32939529  lr:0.000001
+[ Tue Dec  2 12:57:52 2025 ] 	Epoch: 77, Batch(1400/1417) done. Loss: 8.96774292  lr:0.000001
+[ Tue Dec  2 12:58:00 2025 ] 	Mean training loss: 9.9990240163.
+[ Tue Dec  2 12:59:32 2025 ] Dev WER: 19.35% DEV del 07.24% DEV ins 02.28%
+[ Tue Dec  2 12:59:32 2025 ] Test WER: 19.85% Test del 07.05% Test ins 02.08%
+[ Tue Dec  2 12:59:32 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 12:59:32 2025 ] Epoch 77 costs 9 mins 37 seconds
+[ Tue Dec  2 12:59:32 2025 ] Training costs 14 hours 15 mins 8 seconds
+[ Tue Dec  2 12:59:36 2025 ] 	Epoch: 78, Batch(0/1417) done. Loss: 9.41164398  lr:0.000001
+[ Tue Dec  2 13:01:16 2025 ] 	Epoch: 78, Batch(200/1417) done. Loss: 9.74904919  lr:0.000001
+[ Tue Dec  2 13:02:57 2025 ] 	Epoch: 78, Batch(400/1417) done. Loss: 12.70893955  lr:0.000001
+[ Tue Dec  2 13:04:39 2025 ] 	Epoch: 78, Batch(600/1417) done. Loss: 14.06600380  lr:0.000001
+[ Tue Dec  2 13:06:46 2025 ] 	Epoch: 78, Batch(800/1417) done. Loss: 9.22250748  lr:0.000001
+[ Tue Dec  2 13:08:28 2025 ] 	Epoch: 78, Batch(1000/1417) done. Loss: 12.45371056  lr:0.000001
+[ Tue Dec  2 13:10:20 2025 ] 	Epoch: 78, Batch(1200/1417) done. Loss: 9.48263741  lr:0.000001
+[ Tue Dec  2 13:11:58 2025 ] 	Epoch: 78, Batch(1400/1417) done. Loss: 10.70036411  lr:0.000001
+[ Tue Dec  2 13:12:07 2025 ] 	Mean training loss: 10.0761283469.
+[ Tue Dec  2 13:13:52 2025 ] Dev WER: 19.26% DEV del 07.05% DEV ins 02.24%
+[ Tue Dec  2 13:13:52 2025 ] Test WER: 19.91% Test del 06.71% Test ins 02.19%
+[ Tue Dec  2 13:13:52 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 13:13:52 2025 ] Epoch 78 costs 14 mins 19 seconds
+[ Tue Dec  2 13:13:52 2025 ] Training costs 14 hours 29 mins 28 seconds
+[ Tue Dec  2 13:13:58 2025 ] 	Epoch: 79, Batch(0/1417) done. Loss: 8.91774559  lr:0.000001
+[ Tue Dec  2 13:15:51 2025 ] 	Epoch: 79, Batch(200/1417) done. Loss: 7.50970888  lr:0.000001
+[ Tue Dec  2 13:17:37 2025 ] 	Epoch: 79, Batch(400/1417) done. Loss: 7.47210217  lr:0.000001
+[ Tue Dec  2 13:19:19 2025 ] 	Epoch: 79, Batch(600/1417) done. Loss: 9.60703659  lr:0.000001
+[ Tue Dec  2 13:21:00 2025 ] 	Epoch: 79, Batch(800/1417) done. Loss: 11.55458069  lr:0.000001
+[ Tue Dec  2 13:22:38 2025 ] 	Epoch: 79, Batch(1000/1417) done. Loss: 9.61010838  lr:0.000001
+[ Tue Dec  2 13:24:23 2025 ] 	Epoch: 79, Batch(1200/1417) done. Loss: 10.84042168  lr:0.000001
+[ Tue Dec  2 13:26:10 2025 ] 	Epoch: 79, Batch(1400/1417) done. Loss: 14.17733097  lr:0.000001
+[ Tue Dec  2 13:26:18 2025 ] 	Mean training loss: 9.9881278780.
+[ Tue Dec  2 13:28:09 2025 ] Dev WER: 19.15% DEV del 06.88% DEV ins 02.29%
+[ Tue Dec  2 13:28:09 2025 ] Test WER: 19.65% Test del 06.51% Test ins 02.22%
+[ Tue Dec  2 13:28:09 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 13:28:09 2025 ] Epoch 79 costs 14 mins 16 seconds
+[ Tue Dec  2 13:28:09 2025 ] Training costs 14 hours 43 mins 45 seconds
+[ Tue Dec  2 13:28:12 2025 ] 	Epoch: 80, Batch(0/1417) done. Loss: 7.79812908  lr:0.000001
+[ Tue Dec  2 13:29:57 2025 ] 	Epoch: 80, Batch(200/1417) done. Loss: 7.85016155  lr:0.000001
+[ Tue Dec  2 13:31:41 2025 ] 	Epoch: 80, Batch(400/1417) done. Loss: 10.06948185  lr:0.000001
+[ Tue Dec  2 13:33:37 2025 ] 	Epoch: 80, Batch(600/1417) done. Loss: 13.18029594  lr:0.000001
+[ Tue Dec  2 13:35:19 2025 ] 	Epoch: 80, Batch(800/1417) done. Loss: 13.54161263  lr:0.000001
+[ Tue Dec  2 13:36:56 2025 ] 	Epoch: 80, Batch(1000/1417) done. Loss: 6.62849903  lr:0.000001
+[ Tue Dec  2 13:38:32 2025 ] 	Epoch: 80, Batch(1200/1417) done. Loss: 8.34557343  lr:0.000001
+[ Tue Dec  2 13:40:23 2025 ] 	Epoch: 80, Batch(1400/1417) done. Loss: 10.43224621  lr:0.000001
+[ Tue Dec  2 13:40:32 2025 ] 	Mean training loss: 9.9590971677.
+[ Tue Dec  2 13:42:05 2025 ] Dev WER: 19.28% DEV del 07.14% DEV ins 02.26%
+[ Tue Dec  2 13:42:05 2025 ] Test WER: 19.79% Test del 06.93% Test ins 02.08%
+[ Tue Dec  2 13:42:05 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 13:42:06 2025 ] Epoch 80 costs 13 mins 57 seconds
+[ Tue Dec  2 13:42:06 2025 ] Training costs 14 hours 57 mins 42 seconds
+[ Tue Dec  2 13:42:13 2025 ] 	Epoch: 81, Batch(0/1417) done. Loss: 15.64454365  lr:0.000001
+[ Tue Dec  2 13:43:14 2025 ] 	Epoch: 81, Batch(200/1417) done. Loss: 9.86253738  lr:0.000001
+[ Tue Dec  2 13:44:07 2025 ] 	Epoch: 81, Batch(400/1417) done. Loss: 8.57306004  lr:0.000001
+[ Tue Dec  2 13:45:08 2025 ] 	Epoch: 81, Batch(600/1417) done. Loss: 8.40688705  lr:0.000001
+[ Tue Dec  2 13:46:01 2025 ] 	Epoch: 81, Batch(800/1417) done. Loss: 12.04903221  lr:0.000001
+[ Tue Dec  2 13:47:30 2025 ] 	Epoch: 81, Batch(1000/1417) done. Loss: 8.34400368  lr:0.000001
+[ Tue Dec  2 13:48:45 2025 ] 	Epoch: 81, Batch(1200/1417) done. Loss: 8.70120811  lr:0.000001
+[ Tue Dec  2 13:49:38 2025 ] 	Epoch: 81, Batch(1400/1417) done. Loss: 13.39148235  lr:0.000001
+[ Tue Dec  2 13:49:42 2025 ] 	Mean training loss: 10.0448170802.
+[ Tue Dec  2 13:50:59 2025 ] Dev WER: 19.24% DEV del 07.19% DEV ins 02.28%
+[ Tue Dec  2 13:50:59 2025 ] Test WER: 19.76% Test del 06.84% Test ins 02.23%
+[ Tue Dec  2 13:50:59 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 13:50:59 2025 ] Epoch 81 costs 8 mins 53 seconds
+[ Tue Dec  2 13:50:59 2025 ] Training costs 15 hours 6 mins 35 seconds
+[ Tue Dec  2 13:51:06 2025 ] 	Epoch: 82, Batch(0/1417) done. Loss: 14.97673607  lr:0.000001
+[ Tue Dec  2 13:52:05 2025 ] 	Epoch: 82, Batch(200/1417) done. Loss: 8.63526917  lr:0.000001
+[ Tue Dec  2 13:53:07 2025 ] 	Epoch: 82, Batch(400/1417) done. Loss: 7.06506395  lr:0.000001
+[ Tue Dec  2 13:54:05 2025 ] 	Epoch: 82, Batch(600/1417) done. Loss: 7.14604855  lr:0.000001
+[ Tue Dec  2 13:54:58 2025 ] 	Epoch: 82, Batch(800/1417) done. Loss: 14.56015778  lr:0.000001
+[ Tue Dec  2 13:55:56 2025 ] 	Epoch: 82, Batch(1000/1417) done. Loss: 12.58379364  lr:0.000001
+[ Tue Dec  2 13:57:00 2025 ] 	Epoch: 82, Batch(1200/1417) done. Loss: 14.59085464  lr:0.000001
+[ Tue Dec  2 13:57:55 2025 ] 	Epoch: 82, Batch(1400/1417) done. Loss: 11.26181412  lr:0.000001
+[ Tue Dec  2 13:58:13 2025 ] 	Mean training loss: 9.9928797151.
+[ Tue Dec  2 13:59:29 2025 ] Dev WER: 19.30% DEV del 06.99% DEV ins 02.28%
+[ Tue Dec  2 13:59:29 2025 ] Test WER: 19.98% Test del 06.98% Test ins 02.25%
+[ Tue Dec  2 13:59:29 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 13:59:29 2025 ] Epoch 82 costs 8 mins 29 seconds
+[ Tue Dec  2 13:59:29 2025 ] Training costs 15 hours 15 mins 5 seconds
+[ Tue Dec  2 13:59:35 2025 ] 	Epoch: 83, Batch(0/1417) done. Loss: 12.37893486  lr:0.000001
+[ Tue Dec  2 14:00:32 2025 ] 	Epoch: 83, Batch(200/1417) done. Loss: 9.05221939  lr:0.000001
+[ Tue Dec  2 14:01:26 2025 ] 	Epoch: 83, Batch(400/1417) done. Loss: 9.50843143  lr:0.000001
+[ Tue Dec  2 14:02:21 2025 ] 	Epoch: 83, Batch(600/1417) done. Loss: 11.16252518  lr:0.000001
+[ Tue Dec  2 14:03:29 2025 ] 	Epoch: 83, Batch(800/1417) done. Loss: 9.95211029  lr:0.000001
+[ Tue Dec  2 14:04:23 2025 ] 	Epoch: 83, Batch(1000/1417) done. Loss: 13.51021957  lr:0.000001
+[ Tue Dec  2 14:05:16 2025 ] 	Epoch: 83, Batch(1200/1417) done. Loss: 6.42529011  lr:0.000001
+[ Tue Dec  2 14:06:18 2025 ] 	Epoch: 83, Batch(1400/1417) done. Loss: 12.95271301  lr:0.000001
+[ Tue Dec  2 14:06:22 2025 ] 	Mean training loss: 9.9047012114.
+[ Tue Dec  2 14:07:34 2025 ] Dev WER: 19.28% DEV del 06.94% DEV ins 02.42%
+[ Tue Dec  2 14:07:34 2025 ] Test WER: 19.79% Test del 06.71% Test ins 02.20%
+[ Tue Dec  2 14:07:34 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 14:07:34 2025 ] Epoch 83 costs 8 mins 5 seconds
+[ Tue Dec  2 14:07:34 2025 ] Training costs 15 hours 23 mins 10 seconds
+[ Tue Dec  2 14:07:40 2025 ] 	Epoch: 84, Batch(0/1417) done. Loss: 11.72914505  lr:0.000001
+[ Tue Dec  2 14:08:37 2025 ] 	Epoch: 84, Batch(200/1417) done. Loss: 14.05352020  lr:0.000001
+[ Tue Dec  2 14:09:29 2025 ] 	Epoch: 84, Batch(400/1417) done. Loss: 8.85465717  lr:0.000001
+[ Tue Dec  2 14:10:28 2025 ] 	Epoch: 84, Batch(600/1417) done. Loss: 15.35369396  lr:0.000001
+[ Tue Dec  2 14:11:22 2025 ] 	Epoch: 84, Batch(800/1417) done. Loss: 12.52306080  lr:0.000001
+[ Tue Dec  2 14:12:16 2025 ] 	Epoch: 84, Batch(1000/1417) done. Loss: 7.98221970  lr:0.000001
+[ Tue Dec  2 14:13:18 2025 ] 	Epoch: 84, Batch(1200/1417) done. Loss: 8.49633789  lr:0.000001
+[ Tue Dec  2 14:14:19 2025 ] 	Epoch: 84, Batch(1400/1417) done. Loss: 10.62597847  lr:0.000001
+[ Tue Dec  2 14:14:34 2025 ] 	Mean training loss: 9.9695335397.
+[ Tue Dec  2 14:15:39 2025 ] Dev WER: 19.35% DEV del 06.97% DEV ins 02.38%
+[ Tue Dec  2 14:15:39 2025 ] Test WER: 19.91% Test del 06.81% Test ins 02.28%
+[ Tue Dec  2 14:15:39 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 14:15:39 2025 ] Epoch 84 costs 8 mins 4 seconds
+[ Tue Dec  2 14:15:39 2025 ] Training costs 15 hours 31 mins 15 seconds
+[ Tue Dec  2 14:15:43 2025 ] 	Epoch: 85, Batch(0/1417) done. Loss: 12.46762753  lr:0.000001
+[ Tue Dec  2 14:16:46 2025 ] 	Epoch: 85, Batch(200/1417) done. Loss: 10.16966438  lr:0.000001
+[ Tue Dec  2 14:17:44 2025 ] 	Epoch: 85, Batch(400/1417) done. Loss: 9.81533146  lr:0.000001
+[ Tue Dec  2 14:19:38 2025 ] 	Epoch: 85, Batch(600/1417) done. Loss: 13.14669800  lr:0.000001
+[ Tue Dec  2 14:21:19 2025 ] 	Epoch: 85, Batch(800/1417) done. Loss: 8.46884727  lr:0.000001
+[ Tue Dec  2 14:23:03 2025 ] 	Epoch: 85, Batch(1000/1417) done. Loss: 10.35868645  lr:0.000001
+[ Tue Dec  2 14:24:40 2025 ] 	Epoch: 85, Batch(1200/1417) done. Loss: 8.60421371  lr:0.000001
+[ Tue Dec  2 14:26:35 2025 ] 	Epoch: 85, Batch(1400/1417) done. Loss: 11.80799484  lr:0.000001
+[ Tue Dec  2 14:26:43 2025 ] 	Mean training loss: 9.9966773122.
+[ Tue Dec  2 14:28:13 2025 ] Dev WER: 19.24% DEV del 06.81% DEV ins 02.31%
+[ Tue Dec  2 14:28:13 2025 ] Test WER: 19.88% Test del 06.62% Test ins 02.31%
+[ Tue Dec  2 14:28:13 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 14:28:13 2025 ] Epoch 85 costs 12 mins 33 seconds
+[ Tue Dec  2 14:28:13 2025 ] Training costs 15 hours 43 mins 49 seconds
+[ Tue Dec  2 14:28:20 2025 ] 	Epoch: 86, Batch(0/1417) done. Loss: 15.14516258  lr:0.000001
+[ Tue Dec  2 14:30:03 2025 ] 	Epoch: 86, Batch(200/1417) done. Loss: 8.37556171  lr:0.000001
+[ Tue Dec  2 14:31:52 2025 ] 	Epoch: 86, Batch(400/1417) done. Loss: 6.05026197  lr:0.000001
+[ Tue Dec  2 14:33:46 2025 ] 	Epoch: 86, Batch(600/1417) done. Loss: 11.05696774  lr:0.000001
+[ Tue Dec  2 14:35:46 2025 ] 	Epoch: 86, Batch(800/1417) done. Loss: 10.07058144  lr:0.000001
+[ Tue Dec  2 14:37:24 2025 ] 	Epoch: 86, Batch(1000/1417) done. Loss: 5.99954128  lr:0.000001
+[ Tue Dec  2 14:39:14 2025 ] 	Epoch: 86, Batch(1200/1417) done. Loss: 8.93755531  lr:0.000001
+[ Tue Dec  2 14:40:56 2025 ] 	Epoch: 86, Batch(1400/1417) done. Loss: 11.09541035  lr:0.000001
+[ Tue Dec  2 14:41:05 2025 ] 	Mean training loss: 9.9443021995.
+[ Tue Dec  2 14:42:53 2025 ] Dev WER: 19.31% DEV del 06.74% DEV ins 02.51%
+[ Tue Dec  2 14:42:53 2025 ] Test WER: 19.81% Test del 06.48% Test ins 02.37%
+[ Tue Dec  2 14:42:53 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 14:42:53 2025 ] Epoch 86 costs 14 mins 40 seconds
+[ Tue Dec  2 14:42:53 2025 ] Training costs 15 hours 58 mins 29 seconds
+[ Tue Dec  2 14:43:00 2025 ] 	Epoch: 87, Batch(0/1417) done. Loss: 7.15424824  lr:0.000001
+[ Tue Dec  2 14:45:12 2025 ] 	Epoch: 87, Batch(200/1417) done. Loss: 10.97746658  lr:0.000001
+[ Tue Dec  2 14:47:01 2025 ] 	Epoch: 87, Batch(400/1417) done. Loss: 7.71120501  lr:0.000001
+[ Tue Dec  2 14:48:54 2025 ] 	Epoch: 87, Batch(600/1417) done. Loss: 18.27087975  lr:0.000001
+[ Tue Dec  2 14:50:42 2025 ] 	Epoch: 87, Batch(800/1417) done. Loss: 11.63503361  lr:0.000001
+[ Tue Dec  2 14:52:21 2025 ] 	Epoch: 87, Batch(1000/1417) done. Loss: 8.62918758  lr:0.000001
+[ Tue Dec  2 14:53:59 2025 ] 	Epoch: 87, Batch(1200/1417) done. Loss: 11.30620766  lr:0.000001
+[ Tue Dec  2 14:55:54 2025 ] 	Epoch: 87, Batch(1400/1417) done. Loss: 7.41987514  lr:0.000001
+[ Tue Dec  2 14:56:02 2025 ] 	Mean training loss: 9.9376401107.
+[ Tue Dec  2 14:57:53 2025 ] Dev WER: 19.13% DEV del 06.88% DEV ins 02.28%
+[ Tue Dec  2 14:57:53 2025 ] Test WER: 19.62% Test del 06.73% Test ins 02.19%
+[ Tue Dec  2 14:57:53 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 14:57:53 2025 ] Epoch 87 costs 14 mins 59 seconds
+[ Tue Dec  2 14:57:53 2025 ] Training costs 16 hours 13 mins 29 seconds
+[ Tue Dec  2 14:58:01 2025 ] 	Epoch: 88, Batch(0/1417) done. Loss: 9.12116241  lr:0.000001
+[ Tue Dec  2 14:59:44 2025 ] 	Epoch: 88, Batch(200/1417) done. Loss: 6.05758190  lr:0.000001
+[ Tue Dec  2 15:01:22 2025 ] 	Epoch: 88, Batch(400/1417) done. Loss: 8.54216957  lr:0.000001
+[ Tue Dec  2 15:03:19 2025 ] 	Epoch: 88, Batch(600/1417) done. Loss: 12.05800819  lr:0.000001
+[ Tue Dec  2 15:05:00 2025 ] 	Epoch: 88, Batch(800/1417) done. Loss: 11.60174751  lr:0.000001
+[ Tue Dec  2 15:06:12 2025 ] 	Epoch: 88, Batch(1000/1417) done. Loss: 7.08565807  lr:0.000001
+[ Tue Dec  2 15:07:07 2025 ] 	Epoch: 88, Batch(1200/1417) done. Loss: 12.75943184  lr:0.000001
+[ Tue Dec  2 15:08:07 2025 ] 	Epoch: 88, Batch(1400/1417) done. Loss: 12.56269836  lr:0.000001
+[ Tue Dec  2 15:08:11 2025 ] 	Mean training loss: 10.0355728172.
+[ Tue Dec  2 15:09:47 2025 ] Dev WER: 19.31% DEV del 06.87% DEV ins 02.29%
+[ Tue Dec  2 15:09:47 2025 ] Test WER: 19.82% Test del 06.58% Test ins 02.33%
+[ Tue Dec  2 15:09:47 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 15:09:47 2025 ] Epoch 88 costs 11 mins 54 seconds
+[ Tue Dec  2 15:09:47 2025 ] Training costs 16 hours 25 mins 23 seconds
+[ Tue Dec  2 15:09:52 2025 ] 	Epoch: 89, Batch(0/1417) done. Loss: 12.50737858  lr:0.000001
+[ Tue Dec  2 15:11:08 2025 ] 	Epoch: 89, Batch(200/1417) done. Loss: 7.16544151  lr:0.000001
+[ Tue Dec  2 15:12:36 2025 ] 	Epoch: 89, Batch(400/1417) done. Loss: 11.56200314  lr:0.000001
+[ Tue Dec  2 15:13:51 2025 ] 	Epoch: 89, Batch(600/1417) done. Loss: 16.69981766  lr:0.000001
+[ Tue Dec  2 15:14:57 2025 ] 	Epoch: 89, Batch(800/1417) done. Loss: 9.82489872  lr:0.000001
+[ Tue Dec  2 15:16:06 2025 ] 	Epoch: 89, Batch(1000/1417) done. Loss: 9.00434685  lr:0.000001
+[ Tue Dec  2 15:17:16 2025 ] 	Epoch: 89, Batch(1200/1417) done. Loss: 9.45217323  lr:0.000001
+[ Tue Dec  2 15:18:49 2025 ] 	Epoch: 89, Batch(1400/1417) done. Loss: 9.00213242  lr:0.000001
+[ Tue Dec  2 15:18:53 2025 ] 	Mean training loss: 9.9451888504.
+[ Tue Dec  2 15:20:27 2025 ] Dev WER: 19.17% DEV del 06.99% DEV ins 02.28%
+[ Tue Dec  2 15:20:27 2025 ] Test WER: 19.94% Test del 06.98% Test ins 02.19%
+[ Tue Dec  2 15:20:27 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 15:20:27 2025 ] Epoch 89 costs 10 mins 39 seconds
+[ Tue Dec  2 15:20:27 2025 ] Training costs 16 hours 36 mins 2 seconds
+[ Tue Dec  2 15:20:31 2025 ] 	Epoch: 90, Batch(0/1417) done. Loss: 11.76517963  lr:0.000001
+[ Tue Dec  2 15:21:54 2025 ] 	Epoch: 90, Batch(200/1417) done. Loss: 9.09537888  lr:0.000001
+[ Tue Dec  2 15:22:47 2025 ] 	Epoch: 90, Batch(400/1417) done. Loss: 10.91911221  lr:0.000001
+[ Tue Dec  2 15:23:41 2025 ] 	Epoch: 90, Batch(600/1417) done. Loss: 13.39778709  lr:0.000001
+[ Tue Dec  2 15:24:38 2025 ] 	Epoch: 90, Batch(800/1417) done. Loss: 19.08053589  lr:0.000001
+[ Tue Dec  2 15:25:36 2025 ] 	Epoch: 90, Batch(1000/1417) done. Loss: 5.54696369  lr:0.000001
+[ Tue Dec  2 15:26:34 2025 ] 	Epoch: 90, Batch(1200/1417) done. Loss: 7.28477478  lr:0.000001
+[ Tue Dec  2 15:28:01 2025 ] 	Epoch: 90, Batch(1400/1417) done. Loss: 12.67953300  lr:0.000001
+[ Tue Dec  2 15:28:09 2025 ] 	Mean training loss: 9.9354610827.
+[ Tue Dec  2 15:29:38 2025 ] Dev WER: 19.22% DEV del 06.94% DEV ins 02.35%
+[ Tue Dec  2 15:29:38 2025 ] Test WER: 19.99% Test del 06.71% Test ins 02.23%
+[ Tue Dec  2 15:29:38 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 15:29:39 2025 ] Epoch 90 costs 9 mins 11 seconds
+[ Tue Dec  2 15:29:39 2025 ] Training costs 16 hours 45 mins 14 seconds
+[ Tue Dec  2 15:29:44 2025 ] 	Epoch: 91, Batch(0/1417) done. Loss: 7.43802261  lr:0.000001
+[ Tue Dec  2 15:31:23 2025 ] 	Epoch: 91, Batch(200/1417) done. Loss: 6.68862963  lr:0.000001
+[ Tue Dec  2 15:33:08 2025 ] 	Epoch: 91, Batch(400/1417) done. Loss: 7.43580580  lr:0.000001
+[ Tue Dec  2 15:34:48 2025 ] 	Epoch: 91, Batch(600/1417) done. Loss: 13.45544529  lr:0.000001
+[ Tue Dec  2 15:36:45 2025 ] 	Epoch: 91, Batch(800/1417) done. Loss: 9.34237862  lr:0.000001
+[ Tue Dec  2 15:38:24 2025 ] 	Epoch: 91, Batch(1000/1417) done. Loss: 10.19652271  lr:0.000001
+[ Tue Dec  2 15:40:06 2025 ] 	Epoch: 91, Batch(1200/1417) done. Loss: 8.13902283  lr:0.000001
+[ Tue Dec  2 15:42:02 2025 ] 	Epoch: 91, Batch(1400/1417) done. Loss: 10.63035202  lr:0.000001
+[ Tue Dec  2 15:42:10 2025 ] 	Mean training loss: 9.8381302877.
+[ Tue Dec  2 15:43:55 2025 ] Dev WER: 19.42% DEV del 07.03% DEV ins 02.31%
+[ Tue Dec  2 15:43:55 2025 ] Test WER: 19.68% Test del 06.75% Test ins 02.22%
+[ Tue Dec  2 15:43:55 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 15:43:55 2025 ] Epoch 91 costs 14 mins 16 seconds
+[ Tue Dec  2 15:43:55 2025 ] Training costs 16 hours 59 mins 31 seconds
+[ Tue Dec  2 15:44:04 2025 ] 	Epoch: 92, Batch(0/1417) done. Loss: 10.96318626  lr:0.000001
+[ Tue Dec  2 15:45:51 2025 ] 	Epoch: 92, Batch(200/1417) done. Loss: 8.80788612  lr:0.000001
+[ Tue Dec  2 15:47:32 2025 ] 	Epoch: 92, Batch(400/1417) done. Loss: 13.48462772  lr:0.000001
+[ Tue Dec  2 15:49:29 2025 ] 	Epoch: 92, Batch(600/1417) done. Loss: 8.12881565  lr:0.000001
+[ Tue Dec  2 15:51:12 2025 ] 	Epoch: 92, Batch(800/1417) done. Loss: 12.96384716  lr:0.000001
+[ Tue Dec  2 15:52:54 2025 ] 	Epoch: 92, Batch(1000/1417) done. Loss: 7.72777653  lr:0.000001
+[ Tue Dec  2 15:54:58 2025 ] 	Epoch: 92, Batch(1200/1417) done. Loss: 6.50480556  lr:0.000001
+[ Tue Dec  2 15:56:44 2025 ] 	Epoch: 92, Batch(1400/1417) done. Loss: 19.21267891  lr:0.000001
+[ Tue Dec  2 15:56:57 2025 ] 	Mean training loss: 9.9241159391.
+[ Tue Dec  2 15:58:49 2025 ] Dev WER: 19.37% DEV del 06.83% DEV ins 02.46%
+[ Tue Dec  2 15:58:49 2025 ] Test WER: 19.81% Test del 06.56% Test ins 02.33%
+[ Tue Dec  2 15:58:49 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 15:58:49 2025 ] Epoch 92 costs 14 mins 53 seconds
+[ Tue Dec  2 15:58:49 2025 ] Training costs 17 hours 14 mins 25 seconds
+[ Tue Dec  2 15:58:56 2025 ] 	Epoch: 93, Batch(0/1417) done. Loss: 7.61935234  lr:0.000001
+[ Tue Dec  2 16:00:50 2025 ] 	Epoch: 93, Batch(200/1417) done. Loss: 12.05402756  lr:0.000001
+[ Tue Dec  2 16:02:31 2025 ] 	Epoch: 93, Batch(400/1417) done. Loss: 8.40945625  lr:0.000001
+[ Tue Dec  2 16:04:14 2025 ] 	Epoch: 93, Batch(600/1417) done. Loss: 13.83650970  lr:0.000001
+[ Tue Dec  2 16:06:02 2025 ] 	Epoch: 93, Batch(800/1417) done. Loss: 13.30729294  lr:0.000001
+[ Tue Dec  2 16:07:53 2025 ] 	Epoch: 93, Batch(1000/1417) done. Loss: 7.37658072  lr:0.000001
+[ Tue Dec  2 16:09:37 2025 ] 	Epoch: 93, Batch(1200/1417) done. Loss: 8.87925529  lr:0.000001
+[ Tue Dec  2 16:11:22 2025 ] 	Epoch: 93, Batch(1400/1417) done. Loss: 9.31267166  lr:0.000001
+[ Tue Dec  2 16:11:30 2025 ] 	Mean training loss: 9.9665522935.
+[ Tue Dec  2 16:13:14 2025 ] Dev WER: 19.24% DEV del 06.78% DEV ins 02.46%
+[ Tue Dec  2 16:13:14 2025 ] Test WER: 19.91% Test del 06.64% Test ins 02.28%
+[ Tue Dec  2 16:13:14 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 16:13:14 2025 ] Epoch 93 costs 14 mins 24 seconds
+[ Tue Dec  2 16:13:14 2025 ] Training costs 17 hours 28 mins 50 seconds
+[ Tue Dec  2 16:13:18 2025 ] 	Epoch: 94, Batch(0/1417) done. Loss: 10.68534470  lr:0.000001
+[ Tue Dec  2 16:14:32 2025 ] 	Epoch: 94, Batch(200/1417) done. Loss: 7.29745007  lr:0.000001
+[ Tue Dec  2 16:16:26 2025 ] 	Epoch: 94, Batch(400/1417) done. Loss: 11.17265511  lr:0.000001
+[ Tue Dec  2 16:18:06 2025 ] 	Epoch: 94, Batch(600/1417) done. Loss: 13.85096645  lr:0.000001
+[ Tue Dec  2 16:19:06 2025 ] 	Epoch: 94, Batch(800/1417) done. Loss: 8.25740623  lr:0.000001
+[ Tue Dec  2 16:20:07 2025 ] 	Epoch: 94, Batch(1000/1417) done. Loss: 7.63134623  lr:0.000001
+[ Tue Dec  2 16:21:09 2025 ] 	Epoch: 94, Batch(1200/1417) done. Loss: 9.21999931  lr:0.000001
+[ Tue Dec  2 16:22:02 2025 ] 	Epoch: 94, Batch(1400/1417) done. Loss: 14.55670643  lr:0.000001
+[ Tue Dec  2 16:22:06 2025 ] 	Mean training loss: 9.9204285039.
+[ Tue Dec  2 16:23:24 2025 ] Dev WER: 19.28% DEV del 06.96% DEV ins 02.26%
+[ Tue Dec  2 16:23:24 2025 ] Test WER: 19.84% Test del 06.88% Test ins 02.19%
+[ Tue Dec  2 16:23:24 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 16:23:24 2025 ] Epoch 94 costs 10 mins 9 seconds
+[ Tue Dec  2 16:23:24 2025 ] Training costs 17 hours 38 mins 59 seconds
+[ Tue Dec  2 16:23:30 2025 ] 	Epoch: 95, Batch(0/1417) done. Loss: 9.57975769  lr:0.000001
+[ Tue Dec  2 16:24:35 2025 ] 	Epoch: 95, Batch(200/1417) done. Loss: 8.50684357  lr:0.000001
+[ Tue Dec  2 16:25:47 2025 ] 	Epoch: 95, Batch(400/1417) done. Loss: 8.77942276  lr:0.000001
+[ Tue Dec  2 16:27:21 2025 ] 	Epoch: 95, Batch(600/1417) done. Loss: 14.47826767  lr:0.000001
+[ Tue Dec  2 16:28:52 2025 ] 	Epoch: 95, Batch(800/1417) done. Loss: 10.33448982  lr:0.000001
+[ Tue Dec  2 16:30:04 2025 ] 	Epoch: 95, Batch(1000/1417) done. Loss: 9.50219440  lr:0.000001
+[ Tue Dec  2 16:31:00 2025 ] 	Epoch: 95, Batch(1200/1417) done. Loss: 11.54765892  lr:0.000001
+[ Tue Dec  2 16:31:54 2025 ] 	Epoch: 95, Batch(1400/1417) done. Loss: 10.71550083  lr:0.000001
+[ Tue Dec  2 16:31:58 2025 ] 	Mean training loss: 9.9426651768.
+[ Tue Dec  2 16:33:18 2025 ] Dev WER: 19.30% DEV del 07.03% DEV ins 02.19%
+[ Tue Dec  2 16:33:18 2025 ] Test WER: 19.98% Test del 06.71% Test ins 02.16%
+[ Tue Dec  2 16:33:18 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 16:33:18 2025 ] Epoch 95 costs 9 mins 54 seconds
+[ Tue Dec  2 16:33:18 2025 ] Training costs 17 hours 48 mins 54 seconds
+[ Tue Dec  2 16:33:22 2025 ] 	Epoch: 96, Batch(0/1417) done. Loss: 9.20228767  lr:0.000001
+[ Tue Dec  2 16:35:07 2025 ] 	Epoch: 96, Batch(200/1417) done. Loss: 6.10983562  lr:0.000001
+[ Tue Dec  2 16:36:50 2025 ] 	Epoch: 96, Batch(400/1417) done. Loss: 11.79463482  lr:0.000001
+[ Tue Dec  2 16:38:31 2025 ] 	Epoch: 96, Batch(600/1417) done. Loss: 12.05555725  lr:0.000001
+[ Tue Dec  2 16:40:08 2025 ] 	Epoch: 96, Batch(800/1417) done. Loss: 12.04541588  lr:0.000001
+[ Tue Dec  2 16:41:59 2025 ] 	Epoch: 96, Batch(1000/1417) done. Loss: 7.38946867  lr:0.000001
+[ Tue Dec  2 16:43:47 2025 ] 	Epoch: 96, Batch(1200/1417) done. Loss: 7.03677511  lr:0.000001
+[ Tue Dec  2 16:45:45 2025 ] 	Epoch: 96, Batch(1400/1417) done. Loss: 10.25127411  lr:0.000001
+[ Tue Dec  2 16:45:53 2025 ] 	Mean training loss: 9.9838298641.
+[ Tue Dec  2 16:47:41 2025 ] Dev WER: 19.46% DEV del 06.88% DEV ins 02.51%
+[ Tue Dec  2 16:47:41 2025 ] Test WER: 19.71% Test del 06.70% Test ins 02.22%
+[ Tue Dec  2 16:47:41 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 16:47:41 2025 ] Epoch 96 costs 14 mins 22 seconds
+[ Tue Dec  2 16:47:41 2025 ] Training costs 18 hours 3 mins 16 seconds
+[ Tue Dec  2 16:47:46 2025 ] 	Epoch: 97, Batch(0/1417) done. Loss: 8.06165314  lr:0.000001
+[ Tue Dec  2 16:49:44 2025 ] 	Epoch: 97, Batch(200/1417) done. Loss: 8.17855358  lr:0.000001
+[ Tue Dec  2 16:51:21 2025 ] 	Epoch: 97, Batch(400/1417) done. Loss: 10.10828972  lr:0.000001
+[ Tue Dec  2 16:53:12 2025 ] 	Epoch: 97, Batch(600/1417) done. Loss: 6.52179193  lr:0.000001
+[ Tue Dec  2 16:55:07 2025 ] 	Epoch: 97, Batch(800/1417) done. Loss: 11.75602913  lr:0.000001
+[ Tue Dec  2 16:56:46 2025 ] 	Epoch: 97, Batch(1000/1417) done. Loss: 9.38841724  lr:0.000001
+[ Tue Dec  2 16:58:42 2025 ] 	Epoch: 97, Batch(1200/1417) done. Loss: 6.81510258  lr:0.000001
+[ Tue Dec  2 17:00:29 2025 ] 	Epoch: 97, Batch(1400/1417) done. Loss: 8.38987732  lr:0.000001
+[ Tue Dec  2 17:00:38 2025 ] 	Mean training loss: 9.8877797968.
+[ Tue Dec  2 17:02:30 2025 ] Dev WER: 19.69% DEV del 07.10% DEV ins 02.55%
+[ Tue Dec  2 17:02:30 2025 ] Test WER: 19.74% Test del 06.70% Test ins 02.20%
+[ Tue Dec  2 17:02:30 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 17:02:31 2025 ] Epoch 97 costs 14 mins 49 seconds
+[ Tue Dec  2 17:02:31 2025 ] Training costs 18 hours 18 mins 6 seconds
+[ Tue Dec  2 17:02:41 2025 ] 	Epoch: 98, Batch(0/1417) done. Loss: 11.79718018  lr:0.000001
+[ Tue Dec  2 17:04:35 2025 ] 	Epoch: 98, Batch(200/1417) done. Loss: 11.46741104  lr:0.000001
+[ Tue Dec  2 17:06:23 2025 ] 	Epoch: 98, Batch(400/1417) done. Loss: 8.83922386  lr:0.000001
+[ Tue Dec  2 17:08:05 2025 ] 	Epoch: 98, Batch(600/1417) done. Loss: 12.62212372  lr:0.000001
+[ Tue Dec  2 17:09:42 2025 ] 	Epoch: 98, Batch(800/1417) done. Loss: 9.54822445  lr:0.000001
+[ Tue Dec  2 17:11:23 2025 ] 	Epoch: 98, Batch(1000/1417) done. Loss: 7.59747267  lr:0.000001
+[ Tue Dec  2 17:13:18 2025 ] 	Epoch: 98, Batch(1200/1417) done. Loss: 9.96424770  lr:0.000001
+[ Tue Dec  2 17:15:04 2025 ] 	Epoch: 98, Batch(1400/1417) done. Loss: 12.21903801  lr:0.000001
+[ Tue Dec  2 17:15:12 2025 ] 	Mean training loss: 9.9031986221.
+[ Tue Dec  2 17:16:54 2025 ] Dev WER: 19.37% DEV del 07.21% DEV ins 02.28%
+[ Tue Dec  2 17:16:54 2025 ] Test WER: 19.82% Test del 06.96% Test ins 02.19%
+[ Tue Dec  2 17:16:54 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 17:16:54 2025 ] Epoch 98 costs 14 mins 23 seconds
+[ Tue Dec  2 17:16:54 2025 ] Training costs 18 hours 32 mins 30 seconds
+[ Tue Dec  2 17:17:04 2025 ] 	Epoch: 99, Batch(0/1417) done. Loss: 8.77528381  lr:0.000001
+[ Tue Dec  2 17:18:46 2025 ] 	Epoch: 99, Batch(200/1417) done. Loss: 7.55387974  lr:0.000001
+[ Tue Dec  2 17:19:54 2025 ] 	Epoch: 99, Batch(400/1417) done. Loss: 6.66325951  lr:0.000001
+[ Tue Dec  2 17:20:47 2025 ] 	Epoch: 99, Batch(600/1417) done. Loss: 13.84846306  lr:0.000001
+[ Tue Dec  2 17:21:39 2025 ] 	Epoch: 99, Batch(800/1417) done. Loss: 10.99443913  lr:0.000001
+[ Tue Dec  2 17:22:34 2025 ] 	Epoch: 99, Batch(1000/1417) done. Loss: 5.31551361  lr:0.000001
+[ Tue Dec  2 17:23:26 2025 ] 	Epoch: 99, Batch(1200/1417) done. Loss: 8.08658218  lr:0.000001
+[ Tue Dec  2 17:24:24 2025 ] 	Epoch: 99, Batch(1400/1417) done. Loss: 7.74649811  lr:0.000001
+[ Tue Dec  2 17:24:39 2025 ] 	Mean training loss: 9.8503485675.
+[ Tue Dec  2 17:25:43 2025 ] Dev WER: 19.13% DEV del 06.94% DEV ins 02.31%
+[ Tue Dec  2 17:25:43 2025 ] Test WER: 19.82% Test del 06.78% Test ins 02.25%
+[ Tue Dec  2 17:25:43 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 17:25:43 2025 ] Epoch 99 costs 8 mins 48 seconds
+[ Tue Dec  2 17:25:43 2025 ] Training costs 18 hours 41 mins 18 seconds
+[ Tue Dec  2 17:25:46 2025 ] 	Epoch: 100, Batch(0/1417) done. Loss: 11.96529770  lr:0.000001
+[ Tue Dec  2 17:26:54 2025 ] 	Epoch: 100, Batch(200/1417) done. Loss: 9.16989899  lr:0.000001
+[ Tue Dec  2 17:27:46 2025 ] 	Epoch: 100, Batch(400/1417) done. Loss: 7.03858852  lr:0.000001
+[ Tue Dec  2 17:28:53 2025 ] 	Epoch: 100, Batch(600/1417) done. Loss: 15.05539417  lr:0.000001
+[ Tue Dec  2 17:30:14 2025 ] 	Epoch: 100, Batch(800/1417) done. Loss: 8.43975258  lr:0.000001
+[ Tue Dec  2 17:31:17 2025 ] 	Epoch: 100, Batch(1000/1417) done. Loss: 7.81530952  lr:0.000001
+[ Tue Dec  2 17:32:12 2025 ] 	Epoch: 100, Batch(1200/1417) done. Loss: 13.06484604  lr:0.000001
+[ Tue Dec  2 17:33:26 2025 ] 	Epoch: 100, Batch(1400/1417) done. Loss: 8.49465084  lr:0.000001
+[ Tue Dec  2 17:33:31 2025 ] 	Mean training loss: 9.8200173607.
+[ Tue Dec  2 17:34:48 2025 ] Dev WER: 19.17% DEV del 07.15% DEV ins 02.20%
+[ Tue Dec  2 17:34:48 2025 ] Test WER: 19.90% Test del 06.95% Test ins 02.19%
+[ Tue Dec  2 17:34:48 2025 ] Best_dev: 19.06, 06.61, 02.31, Best_test: 19.87, 06.42, 02.23,Epoch : 30
+[ Tue Dec  2 17:34:49 2025 ] Epoch 100 costs 9 mins 5 seconds
+[ Tue Dec  2 17:34:49 2025 ] Training costs 18 hours 50 mins 24 seconds
+[ Wed Dec  3 21:34:43 2025 ] Parameters:
+{'work_dir': './work_dir/', 'config': './configs/baseline.yaml', 'random_fix': True, 'device': 0, 'phase': 'train', 'save_interval': 10, 'random_seed': 0, 'eval_interval': 1, 'print_log': True, 'log_interval': 200, 'evaluate_tool': 'python', 'feeder': 'dataset.dataloader_video.BaseFeeder', 'dataset': 'phoenix2014', 'dataset_info': {'dataset_root': '/mnt/data/phoenix-2014/phoenix-2014-multisigner', 'dict_path': './preprocess/phoenix2014/gloss_dict.npy', 'evaluation_dir': './evaluation/slr_eval', 'evaluation_prefix': 'phoenix2014-groundtruth'}, 'num_worker': 20, 'feeder_args': {'mode': 'test', 'datatype': 'video', 'num_gloss': -1, 'drop_ratio': 1.0, 'frame_interval': 1, 'image_scale': 1.0, 'input_size': 224, 'prefix': '/mnt/data/phoenix-2014/phoenix-2014-multisigner', 'transform_mode': False}, 'model': 'slr_network.SLRModel', 'model_args': {'num_classes': 1296, 'c2d_type': 'resnet18', 'conv_type': 2, 'use_bn': 1, 'share_classifier': True, 'weight_norm': True}, 'load_weights': False, 'load_checkpoints': False, 'decode_mode': 'beam', 'ignore_weights': [], 'batch_size': 4, 'test_batch_size': 4, 'loss_weights': {'SeqCTC': 1.0, 'ConvCTC': 1.0, 'Dist': 25.0}, 'optimizer_args': {'optimizer': 'Adam', 'learning_rate': {}, 'step': [20, 30, 35], 'learning_ratio': 1, 'scheduler': 'ScheaL', 'weight_decay': 0.0001, 'start_epoch': 0, 'num_epoch': 101, 'nesterov': False}, 'num_epoch': 80, 'world_size': 1, 'local_rank': 0, 'dist_url': 'env://'}
+
